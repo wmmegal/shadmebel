@@ -3,9 +3,19 @@
 
     &.btn-warning {
         color: #fff;
+
+        &:hover {
+            background-color: #fe9d0c;
+            border-color: #fe9d0c;
+        }
     }
     
     &.btn-primary {
         color: #fff;
+
+        &:hover {
+            background-color: #229aac;
+            border-color: #229aac;
+        }
     }
 }

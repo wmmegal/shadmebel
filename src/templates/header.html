@@ -1,5 +1,5 @@
 <header id="header" class="bg-primary pt-12 pb-8">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
         <div class="logo">
             <img src="img/logo.svg" width="243" height="48" loading="lazy" alt="">
         </div>
@@ -10,9 +10,10 @@
                 <span class="badge bg-warning">2</span>
                 <span class="badge bg-warning">0</span>
             </div>
-            <button type="button" class="btn btn-menu ms-8">
+            <button type="button" class="btn btn-menu ms-8" x-data @click="$store.nav.show()">
                 <i class="icon-burger"></i>
             </button>
         </div>
+        {% include 'nav.html' %}
     </div>
 </header>

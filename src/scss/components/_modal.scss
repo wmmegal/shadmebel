@@ -1,0 +1,45 @@
+.modal {
+    .modal-header {
+        position: relative;
+
+        .btn-close {
+            @include center-y;
+            right: 1.5rem;
+            opacity: 1;
+            background: none;
+            padding: 0;
+
+            .icon-cross {
+                width: 0.75rem;
+                height: 0.75rem;
+                stroke: #FFF;
+                stroke-width: 2px;
+            }
+        }
+
+    }
+
+    .modal-body {
+        .offer {
+            figure {
+                max-width: 136px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        .form-control {
+            font-size: 1rem;
+        }
+
+        .row {
+            margin-top: calc(-1*var(--bs-gutter-y));
+            margin-right: calc(-.5*var(--bs-gutter-x));
+            margin-left: calc(-.5*var(--bs-gutter-x));
+        }
+    }
+}

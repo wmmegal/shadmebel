@@ -2,6 +2,10 @@
     background: url("../img/bg-header.svg") no-repeat center 8px;
     position: relative;
 
+    .container {
+        overflow: visible !important;
+    }
+
     .badge {
         font-size: 0.875rem;
         border-radius: $border-radius-sm;

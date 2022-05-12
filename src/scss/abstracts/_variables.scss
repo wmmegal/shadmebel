@@ -108,6 +108,15 @@ $btn-font-size: 1.125rem;
 $btn-font-weight: 600;
 $btn-border-radius: $border-radius-sm;
 
+$btn-padding-y-sm:            0.75rem;
+$btn-padding-x-sm:            1.5rem;
+$btn-font-size-sm:            1rem;
+
+
+// button close
+$btn-close-color: #adb3ba;
+$btn-close-focus-shadow: none;
+
 // form-control
 $input-padding-y: 0.75rem;
 $input-padding-x: 1rem;
@@ -137,3 +146,6 @@ $link-hover-decoration: underline !default;
 
 // css grid
 $enable-cssgrid: false;
+
+// modal
+$modal-lg: 640px;

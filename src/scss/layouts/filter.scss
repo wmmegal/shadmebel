@@ -11,6 +11,7 @@
         .form-label {
             line-height: 1.2;
             margin-bottom: 0.25rem;
+
             &:before {
                 @include pseudo;
                 inset: 0;
@@ -30,32 +31,71 @@
         }
     }
 
-    .dropdown-toggle {
-        padding: 0.75rem 1rem;
-        width: 100%;
-        background: none;
-        border: none;
+    .dropdown {
 
-        span {
-            display: block;
-            text-align: left;
+        .dropdown-toggle {
+            padding: 0.75rem 1rem;
+            width: 100%;
+            background: none;
+            border: none;
+
+            span {
+                display: block;
+                text-align: left;
+            }
+
+            .text-black {
+                font-weight: 500;
+            }
+
+            &:after {
+                @include pseudo;
+                @include center-y;
+                right: 1rem;
+                border: solid #adb3ba;
+                border-width: 0 0 2px 2px;
+                padding: 3px;
+                transform: rotate(-45deg);
+                margin-top: -6px;
+                transition: $transition-base;
+            }
+
+            &.active {
+                &:after {
+                    transform: rotate(135deg);
+                    margin-top: -2px;
+                }
+            }
         }
 
-        .text-black {
-            font-weight: 500;
-        }
+        .dropdown-menu {
+            border-radius: 0 0 $border-radius-sm $border-radius-sm;
+            width: 100%;
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+            transition: $transition-base;
 
-        &:after {
-            @include pseudo;
-            @include center-y;
-            right: 1rem;
-           border: solid #adb3ba;
-           border-width: 0 0  2px 2px;
-           padding: 3px;
-           transform: rotate(-45deg);
-            margin-top: -6px;
+            li {
+                padding: 0.5rem 1.25rem;
+
+                .form-check {
+                    &-input {
+                        border: 1px solid #f5f5f4;
+
+                        &:checked {
+                            border: 0;
+                        }
+                    }
+
+                    &:hover {
+                        .form-check-input:not(:checked) {
+                            border: 1px solid #ced6e0;
+                        }
+                    }
+                }
+            }
         }
     }
+
 
     .btn-warning {
         border-radius: 0 $border-radius $border-radius 0;
