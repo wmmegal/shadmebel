@@ -54,14 +54,20 @@ $spacers: (
 );
 
 // typography
-$font-size-base:              1rem !default;
+$font-size-base: 1rem !default;
 
-$h1-font-size:                $font-size-base * 2 !default;
-$h2-font-size:                $font-size-base * 1.5 !default;
-$h3-font-size:                $font-size-base * 1.375 !default;
-$h4-font-size:                $font-size-base * 1.25 !default;
-$h5-font-size:                $font-size-base * 1.125 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.375 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1.125 !default;
+$h6-font-size: $font-size-base !default;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+        0: 0,
+);
+// scss-docs-end font-sizes
 
 //shadows
 $box-shadow: 0 .5rem 1rem rgba($black, .15);

@@ -1,3 +1,24 @@
-#footer {
+#footer {;
 
+    .text-light {
+        color: #9ca9b7 !important;
+    }
+
+    .nav {
+        gap: 2rem;
+
+        &-link {
+            padding: 0;
+            color: #fff;
+            font-weight: 500;
+
+            &:hover, &.active {
+                color: $primary
+            }
+        }
+    }
+
+    .border-top {
+        border-color: #3d5065 !important;
+    }
 }

@@ -287,65 +287,68 @@
     </article>
     <div class="bg-primary bg-opacity-10 py-12">
         <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="card p-6">
-                        <div class="h5">ТОО «Микрофинансовая организация «Займер»</div>
-                        <div class="row">
-                            <dl class="col-12 d-flex gap-2">
-                                <dt class="flex-shrink-0">
-                                    <svg class="icon-home icon-size stroke-primary">
-                                        <use href="img/symbol/sprite.svg#icon-home"></use>
-                                    </svg>
-                                </dt>
-                                <dd>
-                                    Адрес: Республика Казахстан, 050026 г. Алматы, Алмалинский район ул. Богенбай батыр
-                                    256А, каб. 201
-                                </dd>
-                            </dl>
-                            <dl class="col-6 d-flex gap-2">
-                                <dt class="flex-shrink-0">
-                                    <svg class="icon-file icon-size stroke-primary">
-                                        <use href="img/symbol/sprite.svg#icon-file"></use>
-                                    </svg>
-                                </dt>
-                                <dd>
-                                    Лицензия: №2843
-                                </dd>
-                            </dl>
-                            <dl class="col-6 d-flex gap-2">
-                                <dt class="flex-shrink-0">
-                                    <svg class="icon-phone icon-size stroke-primary">
-                                        <use href="img/symbol/sprite.svg#icon-phone"></use>
-                                    </svg>
-                                </dt>
-                                <dd>
-                                    Телефон: +7 707-101-03-00
-                                </dd>
-                            </dl>
-                            <dl class="col-6 d-flex gap-2">
-                                <dt class="flex-shrink-0">
-                                    <svg class="icon-circle-tick icon-size stroke-primary">
-                                        <use href="img/symbol/sprite.svg#icon-circle-tick"></use>
-                                    </svg>
-                                </dt>
-                                <dd>
-                                    Максимальная ГПС (APR): 32%
-                                </dd>
-                            </dl>
-                            <dl class="col-6 d-flex gap-2">
-                                <dt class="flex-shrink-0">
-                                    <svg class="icon-calendar icon-size stroke-primary">
-                                        <use href="img/symbol/sprite.svg#icon-calendar"></use>
-                                    </svg>
-                                </dt>
-                                <dd>
-                                    Срок: от 61 день до 1 год
-                                </dd>
-                            </dl>
+            <div class="row row-cols-2 g-6 small">
+                {% for i in range(0, 4)  %}
+                    <div class="col">
+                        <div class="card p-6">
+                            <div class="h5 mb-4">ТОО «Микрофинансовая организация «Займер»</div>
+                            <div class="row g-4">
+                                <dl class="col-12 d-flex gap-2 mb-0">
+                                    <dt class="flex-shrink-0 fs-0">
+                                        <svg class="icon-home icon-size stroke-primary">
+                                            <use href="img/symbol/sprite.svg#icon-home"></use>
+                                        </svg>
+                                    </dt>
+                                    <dd>
+                                        Адрес: Республика Казахстан, 050026 г. Алматы, Алмалинский район ул. Богенбай батыр
+                                        256А, каб. 201
+                                    </dd>
+                                </dl>
+                                <dl class="col-6 d-flex gap-2 mb-0">
+                                    <dt class="flex-shrink-0 fs-0">
+                                        <svg class="icon-file icon-size stroke-primary">
+                                            <use href="img/symbol/sprite.svg#icon-file"></use>
+                                        </svg>
+                                    </dt>
+                                    <dd class="mb-0">
+                                        Лицензия: №2843
+                                    </dd>
+                                </dl>
+                                <dl class="col-6 d-flex gap-2 mb-0">
+                                    <dt class="flex-shrink-0 fs-0">
+                                        <svg class="icon-phone icon-size stroke-primary">
+                                            <use href="img/symbol/sprite.svg#icon-phone"></use>
+                                        </svg>
+                                    </dt>
+                                    <dd class="mb-0">
+                                        Телефон: +7 707-101-03-00
+                                    </dd>
+                                </dl>
+                                <dl class="col-6 d-flex gap-2 mb-0">
+                                    <dt class="flex-shrink-0 fs-0">
+                                        <svg class="icon-circle-tick icon-size stroke-primary">
+                                            <use href="img/symbol/sprite.svg#icon-circle-tick"></use>
+                                        </svg>
+                                    </dt>
+                                    <dd class="mb-0">
+                                        Максимальная ГПС (APR): 32%
+                                    </dd>
+                                </dl>
+                                <dl class="col-6 d-flex gap-2 mb-0">
+                                    <dt class="flex-shrink-0 fs-0">
+                                        <svg class="icon-calendar icon-size stroke-primary">
+                                            <use href="img/symbol/sprite.svg#icon-calendar"></use>
+                                        </svg>
+                                    </dt>
+                                    <dd class="mb-0">
+                                        Срок: от 61 день до 1 год
+                                    </dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>
