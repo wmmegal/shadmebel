@@ -2,7 +2,7 @@
 @import "node_modules/bootstrap/scss/functions";
 
 // custom variables
-@import "variables";
+@import "abstracts/variables";
 //
 
 @import "node_modules/bootstrap/scss/variables";
@@ -10,7 +10,7 @@
 @import "node_modules/bootstrap/scss/utilities";
 
 // custom utilities
-@import "utilities";
+@import "abstracts/utilities";
 //
 
 // Layout & components
@@ -53,5 +53,26 @@
 @import "node_modules/bootstrap/scss/utilities/api";
 
 // custom
-@import "fonts";
-@import "custom";
+
+//mixins
+@import "abstracts/mixins";
+
+//base
+@import "base/fonts";
+@import "base/custom";
+@import "base/icons";
+
+//components
+@import "components/stars";
+@import "components/li-markes";
+@import "components/button";
+@import "components/rating";
+@import "components/sticker";
+@import "components/form-check";
+
+//layouts
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/filter";
+@import "layouts/site-main-cards";
+@import "layouts/article";

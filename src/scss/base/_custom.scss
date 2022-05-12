@@ -1,0 +1,35 @@
+@include media-breakpoint-up(xxl) {
+    .container {
+        max-width: 1190px;
+    }
+}
+
+.bg-map {
+    position: relative;
+
+    > .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:before {
+        @include pseudo;
+        @include center-x;
+        background: url("../img/bg-map.svg") no-repeat;
+        width: 666px;
+        height: 317px;
+        top: -4rem;
+    }
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.bg-with-girl {
+    background: url("../img/bg-girl.png") no-repeat right bottom $secondary;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}

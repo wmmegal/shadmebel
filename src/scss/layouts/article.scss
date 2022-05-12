@@ -1,0 +1,77 @@
+.article {
+    p, ul, blockquote, ol, {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+
+        b, strong {
+            font-size: 1rem;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    ul {
+        @extend .markers;
+        @extend .blue;
+        margin-left: 1rem;
+
+        li {
+
+            & + li {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    ol {
+        @extend .list-unstyled;
+        counter-reset: list;
+        padding-left: 0.5rem;
+
+        li {
+            padding-left: 2rem;
+            position: relative;
+
+            &:before {
+                content: counter(list);
+                counter-increment: list;
+                position: absolute;
+                top: 1px;
+                left: 0;
+                border-radius: 50%;
+                text-align: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                border: 1px solid $primary;
+                font-size: 0.75rem;
+            }
+
+
+            & + li {
+                margin-top: 0.75rem;
+            }
+        }
+    }
+
+    blockquote {
+        background: $secondary;
+        padding: 1rem;
+        border-left: 4px solid $primary;
+
+        &.v-2 {
+            padding: 0 0 0 2rem;
+            position: relative;
+
+            &:before {
+                @include pseudo;
+                top: 0;
+                left: 4px;
+                background: url("../img/icon-quote.svg") no-repeat;
+                width: 1rem;
+                height: 0.75rem;
+            }
+        }
+    }
+}
