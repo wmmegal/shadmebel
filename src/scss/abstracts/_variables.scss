@@ -69,6 +69,11 @@ $font-sizes: (
 );
 // scss-docs-end font-sizes
 
+//headings
+$headings-margin-bottom:      $spacer * .5;
+$headings-font-weight:        700;
+$headings-line-height:        1.2;
+
 //shadows
 $box-shadow: 0 .5rem 1rem rgba($black, .15);
 $box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
@@ -120,7 +125,7 @@ $btn-close-focus-shadow: none;
 // form-control
 $input-padding-y: 0.75rem;
 $input-padding-x: 1rem;
-$input-font-size: 0.875rem;
+$input-font-size: 1rem;
 $input-focus-box-shadow: none;
 $input-border-radius: $border-radius-sm;
 $input-border-color: #FFF;

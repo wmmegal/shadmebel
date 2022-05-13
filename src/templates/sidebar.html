@@ -1,0 +1,73 @@
+<div class="col-lg-3">
+    <div class="h2 mb-6">Похожие займы</div>
+    {% for i in range(0, 3) %}
+        <div class="card mb-6">
+            <div class="p-4 border-bottom">
+                <figure class="mb-2 text-center">
+                    <img src="img/img-card.jpg" width="212" height="124" loading="lazy"
+                         alt="">
+                </figure>
+                {% if i == 1 %}
+                    <div class="sticker green">ЗА 5 МИНУТ</div>
+                {% endif %}
+                {% if i == 2 %}
+                    <div class="sticker violet">ОДОБРЕНИЕ 95%</div>
+                {% endif %}
+                {% if i == 3 %}
+                    <div class="sticker red">БЕЗ ПЕРЕПЛАТЫ</div>
+                {% endif %}
+                <div class="rating d-flex align-items-center justify-content-center gap-3">
+                    <div class="stars" data-rating="4">
+                        {% for i in range(1, 6) %}
+                            <svg class="icon-star" data-value="{{ i }}">
+                                <use href="img/symbol/sprite.svg#icon-star"></use>
+                            </svg>
+                        {% endfor %}
+                    </div>
+                    <a href="#" class="link-light small">12 отзывов</a>
+                </div>
+            </div>
+            <div class="p-4 border-bottom small">
+                <dl class="option row mb-3">
+                    <dt class="col text-light fw-normal">
+                        Сумма
+                    </dt>
+                    <dd class="col fw-medium text-end mb-0 text-nowrap">до 1 000 000 ₸</dd>
+                </dl>
+                <dl class="option row mb-3">
+                    <dt class="col text-light fw-normal">
+                        Срок
+                    </dt>
+                    <dd class="col fw-medium text-end mb-0">до 30 дней</dd>
+                </dl>
+                <dl class="option row mb-3">
+                    <dt class="col text-light fw-normal">
+                        Рассмотрение
+                    </dt>
+                    <dd class="col fw-medium text-end mb-0">1 час</dd>
+                </dl>
+                <dl class="option row mb-3">
+                    <dt class="col text-light fw-normal">
+                        Возраст
+                    </dt>
+                    <dd class="col fw-medium text-end mb-0">от 18 лет</dd>
+                </dl>
+                <dl class="option row mb-0">
+                    <dt class="text-light col-12 fw-normal mb-2">
+                        Способы получения
+                    </dt>
+                    <dd class="col-12 d-flex align-items-center gap-4 mb-0">
+                        <img src="img/img-visa.svg" width="44" height="24" loading="lazy" alt="">
+                        <img src="img/img-mc.svg" width="25" height="16" loading="lazy" alt="">
+                        <img src="img/img-pay-3.svg" width="28" height="12" loading="lazy" alt="">
+                        <img src="img/img-bank.svg" width="16" height="16" loading="lazy" alt="">
+                        <img src="img/img-cash.svg" width="24" height="16" loading="lazy" alt="">
+                    </dd>
+                </dl>
+            </div>
+            <div class="p-4">
+                <a href="#" class="btn btn-warning w-100">Получить деньги</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

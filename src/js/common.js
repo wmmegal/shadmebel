@@ -1,11 +1,11 @@
 document.addEventListener('alpine:init', function () {
-    Alpine.data('slider', () => ({
+    Alpine.data('slider', (symbol = ' ₸') => ({
         slider: '',
         input: '',
-        currency: ' ₸',
+        symbol: '',
         typing() {
             const triggerEvents = true,
-                value = Number(this.input.value.replace(this.currency));
+                value = Number(this.input.value.replace(this.symbol));
             this.slider.rangeSlider.update({value}, triggerEvents);
             this.formattedValue(value)
         },
@@ -13,11 +13,12 @@ document.addEventListener('alpine:init', function () {
             this.input.value = '';
         },
         formattedValue(value) {
-            this.input.value = value + this.currency;
+            this.input.value = value + this.symbol;
         },
         init() {
             this.slider = this.$el.querySelector('input[type=range]');
             this.input = this.$el.querySelector('input[type=text]');
+            this.symbol = symbol;
 
             const that = this;
 
@@ -35,7 +36,6 @@ document.addEventListener('alpine:init', function () {
 
         show() {
             this.isOpen = true;
-            console.log(1);
         },
         hide() {
             this.isOpen = false;
