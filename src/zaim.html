@@ -1,0 +1,287 @@
+{% extends "layout.html" %}
+
+{% block page %}
+    <div class="bg-primary pt-md-2 pb-6 pb-md-12 bg-map">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Займы</li>
+                </ol>
+            </nav>
+            <div class="site-main-card card bg-transparent border-0">
+                <div class="card-header bg-transparent p-0 border-0 d-flex align-items-center gap-4 gap-md-6">
+                    <figure class="bg-white mb-0">
+                        <img src="img/img-card.jpg" width="212" height="124" class="img-fluid" alt="">
+                    </figure>
+                    <div>
+                        <h1 class="text-white">Займ в CreditPlus</h1>
+                        <div class="rating d-flex align-items-center gap-3">
+                            <div class="stars" data-rating="4">
+                                {% for i in range(1, 6) %}
+                                    <svg class="icon-star" data-value="{{ i }}">
+                                        <use href="img/symbol/sprite.svg#icon-star"></use>
+                                    </svg>
+                                {% endfor %}
+                            </div>
+                            <span class="rating-value small text-white">4.2</span>
+                            <div class="vr text-white"></div>
+                            <a href="#" class="link-light small">12 отзывов</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0 mt-6">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row row-cols-lg-4">
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Срок</dt>
+                                        <dd class="mb-0">31 дней</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Сумма</dt>
+                                        <dd class="mb-0">до 30 000 ₸</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Рассмотрение</dt>
+                                        <dd class="mb-0">1 час</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Возраст заемщика</dt>
+                                        <dd class="mb-0">от 18 лет</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Возраст</dt>
+                                        <dd class="mb-0">от 18 до 70 лет</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Выдача</dt>
+                                        <dd class="mb-0">За день</dd>
+                                    </dl>
+                                </div>
+                                <div class="col-lg-6 text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Способы получения</dt>
+                                        <dd class="d-flex align-items-center gap-4 mb-0">
+                                            <img src="img/img-visa.svg" width="44" height="24" loading="lazy" alt="">
+                                            <img src="img/img-mc.svg" width="25" height="16" loading="lazy" alt="">
+                                            <img src="img/img-pay-3.svg" width="28" height="12" loading="lazy" alt="">
+                                            <img src="img/img-bank.svg" width="16" height="16" loading="lazy" alt="">
+                                            <img src="img/img-cash.svg" width="24" height="16" loading="lazy" alt="">
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Телефон</dt>
+                                        <dd class="mb-0">8 800-222-23-23</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">Электронная почта</dt>
+                                        <dd class="mb-0">info@creditplus.ru</dd>
+                                    </dl>
+                                </div>
+                                <div class="col text-white small">
+                                    <dl class="mb-0">
+                                        <dt class="text-white-80">info@creditplus.ru</dt>
+                                        <dd class="mb-0">creditplus.ru</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="md-4 mb-md-6">
+                                <label for="sum" class="form-label text-white-80">Желаемый лимит</label>
+                                <div class="input-wrap position-relative" x-data="slider">
+                                    <input type="text" name="card_sum" class="form-control" id="card_sum" @input.debounce.500ms="typing()" @focus="clear()" value="8 000 ₸">
+                                    <input
+                                            type="range"
+                                            min="0"
+                                            max="100000"
+                                            step="500"
+                                            data-buffer="8000" />
+                                    <svg class="icon-pencil position-absolute translate-middle-y end-0 me-4 top-50">
+                                        <use href="img/symbol/sprite.svg#icon-pencil"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-warning w-100">Получить деньги</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-6 py-md-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <nav class="nav nav-card mb-md-6">
+                        <a class="nav-link active" aria-current="page" href="#">Условия</a>
+                        <a class="nav-link" href="#">Требования к заемщикам</a>
+                        <a class="nav-link" href="#">Как оформить</a>
+                        <a class="nav-link" href="#">Способ получения</a>
+                        <a class="nav-link" href="#">Вопрос-ответ</a>
+                        <a class="nav-link" href="#">Отзывы</a>
+                    </nav>
+                    <div class="mb-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="border p-6">
+                                    <div class="h2 mb-2">Преимущества</div>
+                                    <ul class="list-thumbs list-unstyled">
+                                        <li>
+                                            <svg class="icon-thumb-up">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-up"></use>
+                                            </svg>
+                                            <span>Первый займ без процентов</span>
+                                        </li>
+                                        <li>
+                                            <svg class="icon-thumb-up">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-up"></use>
+                                            </svg>
+                                            <span>Большие лимиты одобрения для первого займа</span>
+                                        </li>
+                                        <li>
+                                            <svg class="icon-thumb-up">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-up"></use>
+                                            </svg>
+                                            <span>Нет навязанной страховки и скрытых процентов</span>
+                                        </li>
+                                        <li>
+                                            <svg class="icon-thumb-up">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-up"></use>
+                                            </svg>
+                                            <span>Большие лимиты (до 80000 рублей) для постоянных клиентов</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="border p-6">
+                                    <div class="h2 mb-2">Недостатки</div>
+                                    <ul class="list-thumbs list-unstyled">
+                                        <li>
+                                            <svg class="icon-thumb-down">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-down"></use>
+                                            </svg>
+                                            <span>Первый займ без процентов</span>
+                                        </li>
+                                        <li>
+                                            <svg class="icon-thumb-down">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-down"></use>
+                                            </svg>
+                                            <span>Большие лимиты одобрения для первого займа</span>
+                                        </li>
+                                        <li>
+                                            <svg class="icon-thumb-down">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-down"></use>
+                                            </svg>
+                                            <span>Нет навязанной страховки и скрытых процентов</span>
+                                        </li>
+                                        <li>
+                                            <svg class="icon-thumb-down">
+                                                <use href="img/symbol/sprite.svg#icon-thumb-down"></use>
+                                            </svg>
+                                            <span>Большие лимиты (до 80000 рублей) для постоянных клиентов</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-12">
+                        <h2 class="h1">Онлайн займы в CreditPlus</h2>
+                        <p>CreditPlus – сервис быстрого онлайн-кредитования, один из трех ведущих в России по скорости и объемам кредитования. Все оформление происходит через интернет, а деньги можно получить в любой точке мира, где есть доступ к нему. Быстрая обработка заявок позволяет максимально сократить время до того момента, как средства окажутся в руках клиента.</p>
+                    </div>
+                    <div class="mb-12 bg-secondary p-6 rounded">
+                        <h2 class="h1 mb-4">Онлайн заявка на займ</h2>
+                        <form action="#" method="post">
+                            <div class="mb-4 mb-md-6">
+                                <label for="name" class="form-label text-light">ФИО <span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Фамилия Имя Отчество">
+                            </div>
+                            <div class="mb-4 mb-md-6">
+                                <label for="address" class="form-label text-light">Адрес проживания <span
+                                            class="text-danger">*</span></label>
+                                <input type="text" name="address" class="form-control" id="address"
+                                       placeholder="Город, улица, дом, квартира">
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-2 mb-4 mb-md-6 gy-4 gy-md-6">
+                                <div class="col">
+                                    <label for="sum" class="form-label text-light">Желаемая сумма займа <span
+                                                class="text-danger">*</span></label>
+                                    <div class="input-wrap position-relative" x-data="slider">
+                                        <input type="text" name="sum" class="form-control" id="sum" @input.debounce.500ms="typing()" @focus="clear()" value="8 000 ₸">
+                                        <input
+                                                type="range"
+                                                min="0"
+                                                max="100000"
+                                                step="500"
+                                                data-buffer="8000" />
+                                        <svg class="icon-pencil position-absolute translate-middle-y end-0 me-4 top-50">
+                                            <use href="img/symbol/sprite.svg#icon-pencil"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="term" class="form-label text-light">Желаемый срок займа <span
+                                                class="text-danger">*</span></label>
+                                    <select class="form-select" id="term" name="term">
+                                        <option selected>Выберите срок</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="phone" class="form-label text-light">Номер телефона <span
+                                                class="text-danger">*</span></label>
+                                    <input type="text" name="phone" class="form-control" id="phone" value="+7">
+                                </div>
+                                <div class="col">
+                                    <label for="email" class="form-label text-light">Электронная почта <span
+                                                class="text-danger">*</span></label>
+                                    <input type="text" name="email" class="form-control" id="email"
+                                           placeholder="Введите ваш e-mail">
+                                </div>
+                            </div>
+                            <div class="text-light small mb-6">
+                                Поля, обязательные для заполнения <span class="text-danger">*</span>
+                            </div>
+                            <div class="mb-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="rule" value="1" id="rule">
+                                    <label class="form-check-label small" for="rule">
+                                        Согласен с условиями обработки <a href="#">персональных данных</a>, правилами оказания услуг
+                                        и выражаю свое согласие на получение сведений из основной части кредитных историй и всей
+                                        иной информации
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
