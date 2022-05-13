@@ -1,0 +1,17 @@
+.list-inline.extend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(lg) {
+        gap: 0.75rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        gap: 0.5rem;
+        margin-left: 0.5rem;
+        justify-content: start;
+        flex-direction: column;
+    }
+}

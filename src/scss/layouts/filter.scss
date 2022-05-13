@@ -1,6 +1,23 @@
 #filter {
     .row {
         --bs-gutter-x: 0;
+
+        > .col {
+            border-bottom: 1px solid $border-color;
+
+            @include media-breakpoint-up(md) {
+                border-right: 1px solid $border-color;
+                border-bottom: 0;
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            &:last-child {
+                border-bottom:  0;
+            }
+        }
     }
 
     .input-wrap {
@@ -96,8 +113,11 @@
         }
     }
 
-
     .btn-warning {
         border-radius: 0 $border-radius $border-radius 0;
+        @include media-breakpoint-down(lg) {
+            flex-basis: 100%;
+            border-radius: 0  0 $border-radius $border-radius;
+        }
     }
 }

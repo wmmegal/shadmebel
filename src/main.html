@@ -1,18 +1,18 @@
 {% extends "layout.html" %}
 
 {% block page %}
-    <div class="bg-primary pt-10 pb-12 bg-map">
+    <div class="bg-primary pt-md-10 pb-6 pb-md-12 bg-map">
         <div class="container">
-            <div class="text-white text-center mb-3 display-1 mb-2">Все займы в Казахстане</div>
-            <ul class="list-inline d-flex justify-content-center gap-6 text-white markers yellow mb-12 small fw-medium">
+            <div class="text-white text-md-center mb-3 display-1 mb-2">Все займы в Казахстане</div>
+            <ul class="ms-2 ms-md-0 list-inline extend text-white markers yellow mb-6 mb-lg-12 small fw-medium">
                 <li>Выберите МФО и отправляйте заявки</li>
                 <li>Обслуживаются все города и регионы</li>
                 <li>Круглосуточно 24/7</li>
                 <li>С любой кредитной историей</li>
             </ul>
-            <form method="get" id="filter" class="d-flex border-1 rounded bg-white mb-12">
-                <div class="row col">
-                    <div class="col border-end position-relative">
+            <form method="get" id="filter" class="d-flex flex-wrap flex-lg-nowrap border-1 rounded bg-white mb-8 mb-md-12">
+                <div class="row col row-cols-1 row-cols-md-4">
+                    <div class="col position-relative">
                         <div class="input-wrap">
                             <label for="sum" class="form-label small text-light">Сумма займа</label>
                             <input type="text" class="form-control border-0" id="sum" value="1 000 000 ₸">
@@ -21,7 +21,7 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="col border-end">
+                    <div class="col">
                         <div class="dropdown" x-data="{show: false}" @click.outside="show = false">
                             <button class="dropdown-toggle"
                                     type="button"
@@ -46,7 +46,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col border-end">
+                    <div class="col">
                         <div class="dropdown" x-data="{show: false}" @click.outside="show = false">
                             <button class="dropdown-toggle"
                                     type="button"
@@ -99,7 +99,7 @@
                 </div>
                 <button type="button" class="btn btn-warning">Подобрать</button>
             </form>
-            <div class="site-main-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-6">
+            <div class="site-main-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-2 gy-md-6">
                 {% for i in range(0 ,8) %}
                     <div class="col">
                         <div class="card border-0">
@@ -186,81 +186,84 @@
             </div>
         </div>
     </div>
-    <div class="bg-with-girl bg-secondary py-12">
+    <div class="bg-with-girl bg-secondary py-6 py-md-12">
         <div class="container">
             <div class="display-1 text-center mb-4">Онлайн заявка сразу во все организации</div>
             <p class="text-center mb-12">Отправьте одну заявку сразу во все организации (свыше 20) и получите
                 предложения
                 только с одобренным микрокредитом.
                 Это бесплатно и занимает всего 2 минуты. Никакого спама и нежелательных звонков.</p>
-            <form action="#" method="post" class="w-50">
-                <div class="mb-6">
-                    <label for="name" class="form-label text-light">ФИО <span class="text-danger">*</span></label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Фамилия Имя Отчество">
-                </div>
-                <div class="mb-6">
-                    <label for="address" class="form-label text-light">Адрес проживания <span
-                                class="text-danger">*</span></label>
-                    <input type="text" name="address" class="form-control" id="address"
-                           placeholder="Город, улица, дом, квартира">
-                </div>
-                <div class="row mb-6 gy-6">
-                    <div class="col-6">
-                        <label for="sum" class="form-label text-light">Желаемая сумма займа <span
+            <div class="row">
+                <form action="#" method="post" class="col-lg-6">
+                    <div class="mb-4 mb-md-6">
+                        <label for="name" class="form-label text-light">ФИО <span class="text-danger">*</span></label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Фамилия Имя Отчество">
+                    </div>
+                    <div class="mb-4 mb-md-6">
+                        <label for="address" class="form-label text-light">Адрес проживания <span
                                     class="text-danger">*</span></label>
-                        <div class="input-wrap position-relative" x-data="slider">
-                            <input type="text" name="sum" class="form-control" id="sum" @input.debounce.500ms="typing()" @focus="clear()" value="8 000 ₸">
-                            <input
-                                    type="range"
-                                    min="0"
-                                    max="100000"
-                                    step="500"
-                                    data-buffer="8000" />
-                            <svg class="icon-pencil position-absolute translate-middle-y end-0 me-4 top-50">
-                                <use href="img/symbol/sprite.svg#icon-pencil"></use>
-                            </svg>
+                        <input type="text" name="address" class="form-control" id="address"
+                               placeholder="Город, улица, дом, квартира">
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 mb-4 mb-md-6 gy-4 gy-md-6">
+                        <div class="col">
+                            <label for="sum" class="form-label text-light">Желаемая сумма займа <span
+                                        class="text-danger">*</span></label>
+                            <div class="input-wrap position-relative" x-data="slider">
+                                <input type="text" name="sum" class="form-control" id="sum" @input.debounce.500ms="typing()" @focus="clear()" value="8 000 ₸">
+                                <input
+                                        type="range"
+                                        min="0"
+                                        max="100000"
+                                        step="500"
+                                        data-buffer="8000" />
+                                <svg class="icon-pencil position-absolute translate-middle-y end-0 me-4 top-50">
+                                    <use href="img/symbol/sprite.svg#icon-pencil"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="term" class="form-label text-light">Желаемый срок займа <span
+                                        class="text-danger">*</span></label>
+                            <select class="form-select" id="term" name="term">
+                                <option selected>Выберите срок</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="phone" class="form-label text-light">Номер телефона <span
+                                        class="text-danger">*</span></label>
+                            <input type="text" name="phone" class="form-control" id="phone" value="+7">
+                        </div>
+                        <div class="col">
+                            <label for="email" class="form-label text-light">Электронная почта <span
+                                        class="text-danger">*</span></label>
+                            <input type="text" name="email" class="form-control" id="email"
+                                   placeholder="Введите ваш e-mail">
                         </div>
                     </div>
-                    <div class="col-6">
-                        <label for="term" class="form-label text-light">Желаемый срок займа <span
-                                    class="text-danger">*</span></label>
-                        <select class="form-select" id="term" name="term">
-                            <option selected>Выберите срок</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                    <div class="text-light small mb-6">
+                        Поля, обязательные для заполнения <span class="text-danger">*</span>
                     </div>
-                    <div class="col-6">
-                        <label for="phone" class="form-label text-light">Номер телефона <span
-                                    class="text-danger">*</span></label>
-                        <input type="text" name="phone" class="form-control" id="phone" value="+7">
+                    <div class="mb-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="rule" value="1" id="rule">
+                            <label class="form-check-label small" for="rule">
+                                Согласен с условиями обработки <a href="#">персональных данных</a>, правилами оказания услуг
+                                и выражаю свое согласие на получение сведений из основной части кредитных историй и всей
+                                иной информации
+                            </label>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <label for="email" class="form-label text-light">Электронная почта <span
-                                    class="text-danger">*</span></label>
-                        <input type="text" name="email" class="form-control" id="email"
-                               placeholder="Введите ваш e-mail">
-                    </div>
-                </div>
-                <div class="text-light small mb-6">
-                    Поля, обязательные для заполнения <span class="text-danger">*</span>
-                </div>
-                <div class="mb-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="rule" value="1" id="rule">
-                        <label class="form-check-label small" for="rule">
-                            Согласен с условиями обработки <a href="#">персональных данных</a>, правилами оказания услуг
-                            и выражаю свое согласие на получение сведений из основной части кредитных историй и всей
-                            иной информации
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Отправить заявку</button>
-            </form>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </form>
+            </div>
+
         </div>
     </div>
-    <article class="article container py-12">
+    <article class="article container py-6 py-md-12">
         <h1 class="mb-4">Мы подберем идеальный кредит для вас</h1>
         <p>«ВсемКредиты» — один из крупнейших сервисов подбора займов в рунете. У нас собраны предложения от всех
             легальных МФО/МФК и банков, работающих по лицензии Центробанка РФ. Наши специалисты регулярно мониторят
@@ -308,9 +311,9 @@
             Подбирайте самый дешевый займ или самый выгодный кредит, ознакомьтесь с правилами его оформления и подавайте
             заявку онлайн.</p>
     </article>
-    <div class="bg-primary bg-opacity-10 py-12">
+    <div class="bg-primary bg-opacity-10 py-6 py-md-12">
         <div class="container">
-            <div class="row row-cols-2 g-6 small">
+            <div class="row row-cols-1 row-cols-lg-2 gy-2 g-md-6 small">
                 {% for i in range(0, 4) %}
                     <div class="col">
                         <div class="card p-6">
@@ -328,7 +331,7 @@
                                         256А, каб. 201
                                     </dd>
                                 </dl>
-                                <dl class="col-6 d-flex gap-2 mb-0">
+                                <dl class="col-12 col-lg-6 d-flex gap-2 mb-0">
                                     <dt class="flex-shrink-0 fs-0">
                                         <svg class="icon-file icon-size stroke-primary">
                                             <use href="img/symbol/sprite.svg#icon-file"></use>
@@ -338,7 +341,7 @@
                                         Лицензия: №2843
                                     </dd>
                                 </dl>
-                                <dl class="col-6 d-flex gap-2 mb-0">
+                                <dl class="col-12 col-lg-6 d-flex gap-2 mb-0">
                                     <dt class="flex-shrink-0 fs-0">
                                         <svg class="icon-phone icon-size stroke-primary">
                                             <use href="img/symbol/sprite.svg#icon-phone"></use>
@@ -348,7 +351,7 @@
                                         Телефон: +7 707-101-03-00
                                     </dd>
                                 </dl>
-                                <dl class="col-6 d-flex gap-2 mb-0">
+                                <dl class="col-12 col-lg-6 d-flex gap-2 mb-0">
                                     <dt class="flex-shrink-0 fs-0">
                                         <svg class="icon-circle-tick icon-size stroke-primary">
                                             <use href="img/symbol/sprite.svg#icon-circle-tick"></use>
@@ -358,7 +361,7 @@
                                         Максимальная ГПС (APR): 32%
                                     </dd>
                                 </dl>
-                                <dl class="col-6 d-flex gap-2 mb-0">
+                                <dl class="col-12 col-lg-6 d-flex gap-2 mb-0">
                                     <dt class="flex-shrink-0 fs-0">
                                         <svg class="icon-calendar icon-size stroke-primary">
                                             <use href="img/symbol/sprite.svg#icon-calendar"></use>
@@ -372,7 +375,6 @@
                         </div>
                     </div>
                 {% endfor %}
-
             </div>
         </div>
     </div>

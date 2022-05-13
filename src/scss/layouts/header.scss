@@ -3,7 +3,7 @@
     position: relative;
 
     .container {
-        overflow: visible !important;
+        z-index: 10;
     }
 
     .badge {
@@ -20,6 +20,8 @@
     }
 
     .btn-menu {
+        padding: 0;
+
         .icon-burger {
             @include burger(20px, 2px, 4px, #FFF);
         }
