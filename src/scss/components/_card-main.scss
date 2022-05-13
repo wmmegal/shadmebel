@@ -1,0 +1,39 @@
+.card-main {
+    .text-white-80 {
+        color: rgba(#FFF, 0.8);
+    }
+
+    figure {
+        width: 7.75rem;
+        text-align: center;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+    }
+
+    .rating {
+        color: rgba(#FFF, 0.8);
+
+        .stars {
+            .icon-star {
+                fill: rgba(#000, 0.1);
+            }
+        }
+
+        a {
+            color: rgba(#FFF, 0.8);
+        }
+    }
+
+    dl {
+        dt {
+            font-weight: normal;
+            margin-bottom: 0.25rem;
+        }
+        dd {
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+}

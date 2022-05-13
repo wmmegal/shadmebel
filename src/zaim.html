@@ -9,9 +9,9 @@
                     <li class="breadcrumb-item active" aria-current="page">Займы</li>
                 </ol>
             </nav>
-            <div class="site-main-card card bg-transparent border-0">
-                <div class="card-header bg-transparent p-0 border-0 d-flex align-items-center gap-4 gap-md-6">
-                    <figure class="bg-white mb-0">
+            <div class="card-main card bg-transparent border-0">
+                <div class="card-header bg-transparent p-0 border-0 d-flex flex-wrap align-items-center gap-4 gap-md-6">
+                    <figure class="bg-white mb-0 rounded p-5">
                         <img src="img/img-card.jpg" width="212" height="124" class="img-fluid" alt="">
                     </figure>
                     <div>
@@ -31,9 +31,9 @@
                     </div>
                 </div>
                 <div class="card-body p-0 mt-6">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="row row-cols-lg-4">
+                    <div class="row g-4">
+                        <div class="col-xl-9">
+                            <div class="row g-4 row-cols-2 row-cols-md-4">
                                 <div class="col text-white small">
                                     <dl class="mb-0">
                                         <dt class="text-white-80">Срок</dt>
@@ -70,7 +70,7 @@
                                         <dd class="mb-0">За день</dd>
                                     </dl>
                                 </div>
-                                <div class="col-lg-6 text-white small">
+                                <div class="col-12 col-lg-6 text-white small">
                                     <dl class="mb-0">
                                         <dt class="text-white-80">Способы получения</dt>
                                         <dd class="d-flex align-items-center gap-4 mb-0">
@@ -102,8 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="md-4 mb-md-6">
+                        <div class="col-xl-3">
+                            <div class="md-4 mb-6">
                                 <label for="sum" class="form-label text-white-80">Желаемый лимит</label>
                                 <div class="input-wrap position-relative" x-data="slider">
                                     <input type="text" name="card_sum" class="form-control" id="card_sum"
@@ -129,8 +129,8 @@
     <div class="py-6 py-md-12">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
-                    <nav class="nav nav-card mb-md-6">
+                <div class="col-xl-9">
+                    <nav class="nav nav-card mb-6">
                         <a class="nav-link active" aria-current="page" href="#">Условия</a>
                         <a class="nav-link" href="#">Требования к заемщикам</a>
                         <a class="nav-link" href="#">Как оформить</a>
@@ -138,11 +138,11 @@
                         <a class="nav-link" href="#">Вопрос-ответ</a>
                         <a class="nav-link" href="#">Отзывы</a>
                     </nav>
-                    <div class="mb-12">
-                        <div class="row">
+                    <div class="mb-6 mb-md-12">
+                        <div class="row gy-2 g-md-6">
                             <div class="col-md-6">
-                                <div class="border p-6">
-                                    <div class="h2 mb-2">Преимущества</div>
+                                <div class="border p-6 rounded">
+                                    <div class="h2 mb-5">Преимущества</div>
                                     <ul class="list-thumbs list-unstyled">
                                         <li>
                                             <svg class="icon-thumb-up">
@@ -172,8 +172,8 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="border p-6">
-                                    <div class="h2 mb-2">Недостатки</div>
+                                <div class="border p-6 rounded">
+                                    <div class="h2 mb-5">Недостатки</div>
                                     <ul class="list-thumbs list-unstyled">
                                         <li>
                                             <svg class="icon-thumb-down">
@@ -204,14 +204,14 @@
                             </div>
                         </div>
                     </div>
-                    <article class="article mb-12">
+                    <article class="article mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Онлайн займы в CreditPlus</h2>
                         <p>CreditPlus – сервис быстрого онлайн-кредитования, один из трех ведущих в России по скорости и
                             объемам кредитования. Все оформление происходит через интернет, а деньги можно получить в
                             любой точке мира, где есть доступ к нему. Быстрая обработка заявок позволяет максимально
                             сократить время до того момента, как средства окажутся в руках клиента.</p>
                     </article>
-                    <div class="mb-12 bg-secondary p-6 rounded">
+                    <div class="mb-6 mb-md-12 bg-secondary p-4 p-md-6 rounded">
                         <h2 class="h1 mb-4">Онлайн заявка на займ</h2>
                         <form action="#" method="post">
                             <div class="mb-4 mb-md-6">
@@ -286,14 +286,14 @@
                             </div>
                         </form>
                     </div>
-                    <article class="article mb-12">
+                    <article class="article mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Условия займа в CreditPlus</h2>
                         <p>CreditPlus предлагает на выбор несколько вариантов займов. Новые клиенты могут получить
                             <mark>от 1500 до 15000 руб.</mark>
                             на срок от 5 до 15 дней под 0%. Второй и последующие займы предоставляются согласно
                             установленным тарифам:.
                         </p>
-                        <table class="table">
+                        <table class="table ">
                             <thead>
                             <tr>
                                 <th scope="col">Тариф</th>
@@ -303,7 +303,7 @@
                             <tbody>
                             {% for i in range(0, 10) %}
                                 <tr>
-                                    <td>Старт 0%</td>
+                                    <td class="w-50">Старт 0%</td>
                                     <td>
                                         0% в день, доступно только для первого займа <br>
                                         от 1500 до 15000 рублей<br>
@@ -331,7 +331,7 @@
                             баллы на погашение процентов можно в следующей пропорции: 100 баллов = 1 рубль. Как только
                             заёмщик тратит баллы, он утрачивает возможность перейти на следующий тариф.</p>
                     </article>
-                    <article class="article mb-12">
+                    <article class="article mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Требования к заемщикам</h2>
                         <ul>
                             <li>Гражданство Российской Федерации</li>
@@ -343,11 +343,11 @@
                             получить микрокредит безналично – то банковская карта (VISA или MasterCard) любого банка
                             России или реквизиты банковского счета.</p>
                     </article>
-                    <div class="article mb-12">
-                        <div class="bg-secondary p-6 mb-6">
+                    <div class="article mb-6 mb-md-12">
+                        <div class="bg-secondary p-4 p-md-6 mb-6 rounded">
                             <div class="h1 mb-4">Калькулятор процентов CreditPlus</div>
-                            <form action="#" method="post" class="row row-cols-1 row-cols-md-3">
-                                <div class="col">
+                            <form action="#" method="post" class="row g-4 g-md-6 row-cols-1 row-cols-md-3">
+                                <div class="col order-0">
                                     <label for="sum" class="form-label text-light">Сумма</label>
                                     <div class="input-wrap position-relative" x-data="slider">
                                         <input type="text" name="sum" class="form-control" id="sum"
@@ -364,7 +364,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col order-0">
                                     <label for="sum" class="form-label text-light">Срок</label>
                                     <div class="input-wrap position-relative" x-data="slider(' дня')">
                                         <input type="text" name="term" class="form-control" id="term"
@@ -378,16 +378,16 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="col align-self-end">
-                                    <button type="button" class="btn btn-primary">Отправить заявку</button>
+                                <div class="col order-1 align-self-end">
+                                    <button type="button" class="btn btn-primary w-100">Отправить заявку</button>
                                 </div>
-                                <div class="col">
+                                <div class="col order-0 order-md-2">
                                     <div class="d-flex gap-5 small">
                                         <span class="text-light">Сумма погашения</span>
                                         <span class="fw-medium">8 000 ₸</span>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col order-0 order-md-2">
                                     <div class="d-flex gap-5 small">
                                         <span class="text-light">Погашение</span>
                                         <span class="fw-medium">26.04.2022</span>
@@ -395,7 +395,7 @@
                                 </div>
                             </form>
                         </div>
-                        <table class="table">
+                        <table class="table align-middle">
                             <thead>
                             <tr>
                                 <th scope="col">Название</th>
@@ -409,11 +409,11 @@
                             {% for i in range(0, 4) %}
                                 <tr>
                                     <th scope="col"><a href="#">Маленький</a></th>
-                                    <td>
+                                    <td data-title="Сумма">
                                         8 000 ₸
                                     </td>
-                                    <td>от 0% до 1%</td>
-                                    <td>до 30 дней</td>
+                                    <td data-title="Ставка">от 0% до 1%</td>
+                                    <td data-title="Срок">до 30 дней</td>
                                     <td class="text-end"><a href="#" class="btn btn-primary btn-sm">Онлайн-заявка</a>
                                     </td>
                                 </tr>
@@ -421,26 +421,26 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="article mb-12">
+                    <div class="article mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Оформление заявки в CreditPlus – 5 минут</h2>
                         <p>В процессе оформления заявки система запросит сведения о вашем трудоустройстве, доходах и
                             кредитах, которые вы брали ранее (банк, вид и сумма). Чтобы не затягивать процедуру и
                             предоставить максимально полную информацию, подготовьте эти сведения заранее.</p>
                     </div>
-                    <div class="article mb-12">
+                    <div class="article mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Шансы на одобрение заявки в CreditPlus – 81%</h2>
                         <p>В процессе оформления заявки система запросит сведения о вашем трудоустройстве, доходах и
                             кредитах, которые вы брали ранее (банк, вид и сумма). Чтобы не затягивать процедуру и
                             предоставить максимально полную информацию, подготовьте эти сведения заранее.</p>
                     </div>
-                    <div class="mb-12">
+                    <div class="mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Отказали в CreditPlus? Попробуйте другие займы</h2>
                         <div class="bg-secondary position-relative rounded">
                             <div class="card card-horizontal bg-transparent border-0">
                                 <div class="row g-0">
                                     <div class="col-md-4">
-                                        <div class="p-6">
-                                            <figure class="mb-4">
+                                        <div class="p-4 p-md-6">
+                                            <figure class="mb-4 d-flex flex-column bg-white align-items-center justify-content-center rounded">
                                                 <img src="img/img-card.jpg" width="212" height="124" loading="lazy"
                                                      alt="">
                                             </figure>
@@ -457,36 +457,36 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <div class="p-6">
-                                            <div class="h2 mb-4">Займер</div>
-                                            <div class="row row-cols-1 row-cols-md-3 mb-6">
+                                        <div class="p-4 p-md-6">
+                                            <div class="h2 mb-4 d-none d-md-block">Займер</div>
+                                            <div class="row gy-4 gy-md-6 row-cols-2 row-cols-md-3 mb-6">
                                                 <div class="col">
                                                     <dl class="mb-0">
-                                                        <dt>Срок</dt>
+                                                        <dt class="text-light">Срок</dt>
                                                         <dd class="mb-0">31 дней</dd>
                                                     </dl>
                                                 </div>
                                                 <div class="col">
                                                     <dl class="mb-0">
-                                                        <dt>Сумма</dt>
+                                                        <dt class="text-light">Сумма</dt>
                                                         <dd class="mb-0">до 30 000 ₸</dd>
                                                     </dl>
                                                 </div>
                                                 <div class="col">
                                                     <dl class="mb-0">
-                                                        <dt>Рассмотрение</dt>
+                                                        <dt class="text-light">Рассмотрение</dt>
                                                         <dd class="mb-0">1 час</dd>
                                                     </dl>
                                                 </div>
                                                 <div class="col">
                                                     <dl class="mb-0">
-                                                        <dt>Возраст</dt>
+                                                        <dt class="text-light">Возраст</dt>
                                                         <dd class="mb-0">от 18 до 70 лет</dd>
                                                     </dl>
                                                 </div>
                                                 <div class="col-md-8">
                                                     <dl class="mb-0">
-                                                        <dt>Сумма</dt>
+                                                        <dt class="text-light">Сумма</dt>
                                                         <dd class="col-12 d-flex align-items-center gap-4 mb-0">
                                                             <img src="img/img-visa.svg" width="44" height="24"
                                                                  loading="lazy" alt="">
@@ -502,9 +502,9 @@
                                                     </dl>
                                                 </div>
                                             </div>
-                                            <div class="d-flex">
-                                                <a href="#" class="btn btn-primary">Получить деньги</a>
-                                                <a href="#" class="btn btn-white">Подробнее</a>
+                                            <div class="d-flex flex-wrap gap-2 gap-md-4">
+                                                <a href="#" class="btn btn-primary btn-sm">Получить деньги</a>
+                                                <a href="#" class="btn btn-white btn-sm">Подробнее</a>
                                             </div>
                                         </div>
                                     </div>
@@ -512,7 +512,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="article mb-12">
+                    <div class="article mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Полезные ссылки</h2>
                         <ul>
                             <li><a href="#">Общие условия договора потребительского займа ООО МФК «Мани Мен»</a></li>
@@ -521,7 +521,7 @@
                             <li><a href="#">Свидетельство МФК</a></li>
                         </ul>
                     </div>
-                    <div class="mb-12">
+                    <div class="mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Частые вопросы</h2>
                         <div class="accordion ">
                             {% for i in range(0, 5) %}
@@ -549,22 +549,22 @@
 
                         </div>
                     </div>
-                    <div class="mb-12">
+                    <div class="mb-6 mb-md-12">
                         <h2 class="h1 mb-4">Скачать мобильные приложения</h2>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center gap-2">
+                            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center gap-2 px-8">
                                 <svg class="icon-ios">
                                     <use href="img/symbol/sprite.svg#icon-ios"></use>
                                 </svg>
                                 <span>iOS</span>
                             </a>
-                            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center gap-2">
+                            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center gap-2 px-8">
                                 <svg class="icon-android">
                                     <use href="img/symbol/sprite.svg#icon-android"></use>
                                 </svg>
                                 <span>Android</span>
                             </a>
-                            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center gap-2">
+                            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center gap-2 px-8">
                                 <svg class="icon-windows">
                                     <use href="img/symbol/sprite.svg#icon-windows"></use>
                                 </svg>
@@ -589,12 +589,12 @@
     <div class="py-6 py-md-12 border-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-xl-9">
                     <div class="d-flex align-items-center mb-6 mb-md-12">
                         <div class="h1 mb-0">Отзывы <span class="text-primary ms-2">8</span></div>
                         <button type="button" class="btn btn-primary btn-sm ms-auto">Оставить отзыв</button>
                     </div>
-                    <div class="comments md-6 mb-md-12">
+                    <div class="comments mb-6 mb-md-12">
                         {% for i in range(0, 3) %}
                             <div class="comment mb-6 pb-6 border-bottom">
                                 <div class="comment-head d-flex flex-wrap gap-4 small mb-4">
@@ -608,49 +608,63 @@
                                     <span class="fw-bolder">Анатолий</span>
                                     <span class="text-light">16 сентября 2019</span>
                                 </div>
-                                <div class="comment-text small">
+                                <div class="comment-text small mb-4">
                                     <p class="mb-0">Сотрудники CreditPlus названивают с напоминаем об уже оплаченном
                                         займе в 8
                                         утра, это как вообще?! Не берите здесь займ. Поддержки нормальной нет, только на
                                         почту
                                         пиши и не факт, что ответят.</p>
                                 </div>
-                                <div class="comment-text-with-icon position-relative small">
+                                <div class="comment-text-with-icon position-relative small mb-4">
                                     <div class="icon bg-success">
                                         <svg class="icon-plus">
                                             <use href="img/symbol/sprite.svg#icon-plus"></use>
                                         </svg>
                                     </div>
-                                    <p class="mb-2 fw-medium">Плюсы</p>
+                                    <p class="mb-1 fw-bolder">Плюсы</p>
                                     <p class="mb-0">Хорошие проценты по ставке</p>
                                 </div>
-                                <div class="comment-text-with-icon position-relative small">
+                                <div class="comment-text-with-icon position-relative small mb-4">
                                     <div class="icon bg-danger">
                                         <svg class="icon-minus">
                                             <use href="img/symbol/sprite.svg#icon-minus"></use>
                                         </svg>
                                     </div>
-                                    <p class="mb-2 fw-medium">Минусы</p>
+                                    <p class="mb-2 fw-bolder">Минусы</p>
                                     <p class="mb-0">Система одобрения заявок в Moneyman мне тоже вообще не ясна. Когда
                                         не было
                                         займов нигде, тогда не дали. Когда было еще 3 текущих займа, то Moneyman
                                         одобрили.
                                         Не рекомендую!</p>
                                 </div>
-                                <div class="comment-gallery d-flex gap-2 fs-0">
+                                <div class="comment-gallery d-flex flex-wrap gap-2 fs-0 ">
                                     {% for i in range(0, 3) %}
                                         <a href="#"><img src="img/img-comment.jpg" width="120" height="80"
                                                          loading="lazy"
                                                          class="rounded-1" alt=""></a>
                                     {% endfor %}
                                 </div>
+                                <div class="comment-likes d-flex align-items-center gap-4">
+                                    <button type="button" class="d-inline-flex gap-2 align-items-center">
+                                        <svg class="icon-thumb-up">
+                                            <use href="img/symbol/sprite.svg#icon-thumb-up"></use>
+                                        </svg>
+                                        <span class="text-light">32</span>
+                                    </button>
+                                    <button type="button" class="d-inline-flex gap-2 align-items-center">
+                                        <svg class="icon-thumb-down">
+                                            <use href="img/symbol/sprite.svg#icon-thumb-down"></use>
+                                        </svg>
+                                        <span class="text-light">5</span>
+                                    </button>
+                                </div>
                             </div>
                         {% endfor %}
                         <a href="#" class="btn btn-outline-dark btn-sm">Все отзывы</a>
                     </div>
-                    <div class="bg-secondary rounded p-6">
+                    <div class="bg-secondary rounded p-4 p-md-6">
                         <div class="h1 mb-4">Добавить отзыв</div>
-                        <form action="#" method="post" class="row g-6">
+                        <form action="#" method="post" class="row g-4 g-md-6">
                             <div class="col-md-6">
                                 <label for="name" class="form-label text-light">ФИО <span
                                             class="text-danger">*</span></label>
@@ -699,7 +713,7 @@
                                     Поля, обязательные для заполнения <span class="text-danger">*</span>
                                 </div>
                             </div>
-                            <div class="col-12 d-flex align-items-center gap-4">
+                            <div class="col-12 d-flex flex-wrap flex-md-nowrap align-items-center gap-4">
                                 <button type="button" class="btn btn-primary flex-shrink-0">Добавить отзыв</button>
                                 <div class="small">
                                     Нажимая кнопку <a href="#">«Добавить отзыв»</a> вы соглашаетесь с политикой обработки персональных данных и пользовательским соглашением

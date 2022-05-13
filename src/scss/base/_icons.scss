@@ -25,3 +25,43 @@
     height: 0.625rem;
     fill: #f9af42;
 }
+
+.icon-thumb-up, .icon-thumb-down {
+    width: 1rem;
+    height: 0.875rem;
+    fill: $blue;
+}
+
+.icon-thumb-down {
+    fill: #e8ecef;
+}
+
+.icon-ios {
+    width: 1.125rem;
+    height: 1.25rem;
+    fill: #ffffff;
+}
+
+.icon-android {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: #ffffff;
+}
+
+.icon-windows {
+    width: 1.25rem;
+    height: 1.125rem;
+    fill: #ffffff;
+}
+
+.icon-plus {
+    width: 0.625rem;
+    height: 0.625rem;
+    fill: #FFF;
+}
+
+.icon-minus {
+    width: 0.625rem;
+    height: 0.125rem;
+    fill: #FFF;
+}

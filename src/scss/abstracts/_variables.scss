@@ -70,9 +70,9 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 //headings
-$headings-margin-bottom:      $spacer * .5;
-$headings-font-weight:        700;
-$headings-line-height:        1.2;
+$headings-margin-bottom: $spacer * .5;
+$headings-font-weight: 700;
+$headings-line-height: 1.2;
 
 //shadows
 $box-shadow: 0 .5rem 1rem rgba($black, .15);
@@ -113,9 +113,9 @@ $btn-font-size: 1.125rem;
 $btn-font-weight: 600;
 $btn-border-radius: $border-radius-sm;
 
-$btn-padding-y-sm:            0.75rem;
-$btn-padding-x-sm:            1.5rem;
-$btn-font-size-sm:            1rem;
+$btn-padding-y-sm: 0.75rem;
+$btn-padding-x-sm: 1.5rem;
+$btn-font-size-sm: 1rem;
 
 
 // button close
@@ -154,3 +154,19 @@ $enable-cssgrid: false;
 
 // modal
 $modal-lg: 640px;
+
+//breadcrumb
+$breadcrumb-divider-color: rgba(#FFF, 0.8);
+$breadcrumb-active-color: rgba(#FFF, 0.8);
+
+//table
+$table-cell-padding-y: .5rem;
+$table-cell-padding-x: 0;
+$table-cell-padding-y-sm: .25rem;
+$table-cell-padding-x-sm: .25rem;
+
+//accordion
+$accordion-button-focus-box-shadow: none;
+
+//card
+$card-border-color: $gray-300;

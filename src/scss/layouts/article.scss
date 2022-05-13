@@ -1,5 +1,15 @@
 .article {
-    p, ul, blockquote, ol, {
+    figure {
+        text-align: center;
+
+        .wp-caption {
+            color: rgba(45, 62, 80, 0.5);
+            font-size: 0.875rem;
+            margin-top: 0.75rem;
+        }
+    }
+
+    p, ul, blockquote, ol, table {
         font-size: 0.875rem;
         margin-bottom: 1.5rem;
 

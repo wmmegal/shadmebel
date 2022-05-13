@@ -22,7 +22,7 @@
             @for $i from 1 through $j {
                 svg {
                     &:nth-child(#{$i}) {
-                        fill: $yellow;
+                        fill: $yellow !important;
                     }
                 }
             }
