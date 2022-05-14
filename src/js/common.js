@@ -42,3 +42,7 @@ document.addEventListener('alpine:init', function () {
         }
     })
 });
+
+new Glide('.glide', {
+    rewind: false
+}).mount()
