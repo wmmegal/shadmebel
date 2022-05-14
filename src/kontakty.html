@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block page %}
+    <div class="py-12">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb breadcrumb-dark mb-0">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Займы</li>
+                </ol>
+            </nav>
+            <h1 class="mb-8">Контакты</h1>
+            <div class="row row-cols-1 row-cols-md-3 mb-8">
+                <div class="col">
+                    <div class="h6 mb-3">Связь по любым вопросам</div>
+                    <ul class="list-unstyled small d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center gap-3">
+                            <svg class="icon-size-2 fill-primary icon-home-2">
+                                <use href="img/symbol/sprite.svg#icon-home-2"></use>
+                            </svg>
+                            <span>Москва, ул. Звёздный бульвар, 19</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <svg class="icon-size-2 stroke-primary icon-phone">
+                                <use href="img/symbol/sprite.svg#icon-phone"></use>
+                            </svg>
+                            <span>+7 (499) 490-57-32</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <svg class="icon-size-2 fill-primary icon-email">
+                                <use href="img/symbol/sprite.svg#icon-email"></use>
+                            </svg>
+                            <a href="#">info@mail.ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="h6 mb-3">Для представителей банков</div>
+                    <ul class="list-unstyled small d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center gap-3">
+                            <svg class="icon-size-2 stroke-primary icon-phone">
+                                <use href="img/symbol/sprite.svg#icon-phone"></use>
+                            </svg>
+                            <span>+7 (499) 490-57-32</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <svg class="icon-size-2 fill-primary icon-email">
+                                <use href="img/symbol/sprite.svg#icon-email"></use>
+                            </svg>
+                            <a href="#">info@mail.ru</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="h6 mb-3">Для обращений клиентов</div>
+                    <ul class="list-unstyled small d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center gap-3">
+                            <svg class="icon-size-2 fill-primary icon-email">
+                                <use href="img/symbol/sprite.svg#icon-email"></use>
+                            </svg>
+                            <a href="#">info@mail.ru</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="position-relative">
+                <img src="img/img-map.jpg" width="1160" height="552" class="img-fluid" loading="lazy" alt="">
+                <div class="rounded bg-white p-md-6 contact-form">
+                    <div class="h2 mb-2">Есть вопросы?</div>
+                    <p class="text-light mb-6 small">Оставьте ваше сообщение и мы с вами свяжемся в ближайшее время</p>
+                    <div class="mb-4">
+                        <input type="text" name="name" class="form-control form-control-sm" placeholder="Ваше имя" aria-label="Ваше имя">
+                    </div>
+                    <div class="mb-4">
+                        <input type="text" name="email" class="form-control form-control-sm" placeholder="Введите ваш e-mail" aria-label="Введите ваш e-mail">
+                    </div>
+                    <div class="mb-4">
+                        <textarea name="message" class="form-control form-control-sm" aria-label="Оставьте ваше сообщение"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm w-100">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
