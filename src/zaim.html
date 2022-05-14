@@ -725,5 +725,38 @@
             </div>
         </div>
     </div>
+    <div class="d-none d-lg-block bg-white card-fixed border-0 fixed-bottom shadow">
+        <div class="container py-6">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex gap-8 align-items-center">
+                        <figure class="mb-0">
+                            <img src="img/img-card.jpg" width="212" class="img-fluid" height="124" loading="lazy" alt="">
+                        </figure>
+                        <div class="rating d-flex align-items-center justify-content-center gap-3">
+                            <div class="stars" data-rating="4">
+                                {% for i in range(1, 6) %}
+                                    <svg class="icon-star" data-value="{{ i }}">
+                                        <use href="img/symbol/sprite.svg#icon-star"></use>
+                                    </svg>
+                                {% endfor %}
+                            </div>
+                            <div class="vr"></div>
+                            <a href="#" class="link-light small">12 отзывов</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-8 justify-content-end">
+                        <div class="d-flex gap-2 small">
+                            <span class="text-light">Сумма займа до </span>
+                            <span class="fw-medium">30 000 ₸</span>
+                        </div>
+                        <a href="#" class="btn btn-warning btn-sm">Получить деньги</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
