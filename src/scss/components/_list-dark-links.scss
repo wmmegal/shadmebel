@@ -1,0 +1,12 @@
+.list-dark-links {
+    li {
+
+        a {
+            color: $dark;
+        }
+
+        & + li {
+            margin-top: 0.5rem;
+        }
+    }
+}

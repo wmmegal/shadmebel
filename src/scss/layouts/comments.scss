@@ -25,6 +25,12 @@
                 border: 0;
             }
         }
+
+        &:last-child {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            border: none !important;
+        }
     }
 
     .btn-outline-dark {
@@ -32,6 +38,33 @@
 
         &:hover {
             border-color: #2d3e50;
+        }
+    }
+}
+
+.comments-sort {
+    display: flex;
+    gap: 2rem;
+
+    .dropdown-toggle {
+        position: relative;
+        background: none;
+        padding: 0 2rem 0 0;
+        border: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+
+        &:after {
+            @include center-y;
+            right: 0;
+            width: auto;
+            height: auto;
+            background: none;
+            border: solid $primary;
+            border-width: 0 0 2px 2px;
+            padding: 3px;
+            transform: rotate(-45deg);
+            margin-top: -6px;
         }
     }
 }

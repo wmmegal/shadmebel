@@ -30,6 +30,14 @@ document.addEventListener('alpine:init', function () {
         }
     }))
 
+    Alpine.data('glide', (symbol = ' ₸') => ({
+        init() {
+            new Glide('.glide', {
+                rewind: false
+            }).mount()
+        }
+    }));
+
     Alpine.store('nav', {
         isOpen: false,
         media: matchMedia('(max-width: 1199px)'),
@@ -43,6 +51,3 @@ document.addEventListener('alpine:init', function () {
     })
 });
 
-new Glide('.glide', {
-    rewind: false
-}).mount()
