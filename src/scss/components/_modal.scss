@@ -26,6 +26,7 @@
 
                 img {
                     width: 100%;
+                    height: auto;
                 }
             }
         }
@@ -33,9 +34,73 @@
 
     .modal-footer {
         .row {
-            margin-top: calc(-1*var(--bs-gutter-y));
-            margin-right: calc(-.5*var(--bs-gutter-x));
-            margin-left: calc(-.5*var(--bs-gutter-x));
+            margin-top: calc(-1 * var(--bs-gutter-y));
+            margin-right: calc(-.5 * var(--bs-gutter-x));
+            margin-left: calc(-.5 * var(--bs-gutter-x));
+        }
+    }
+
+    &#promocode {
+        .modal-header {
+            .btn-close {
+                top: 1.5rem;
+                transform: none;
+
+                .icon-cross {
+                    stroke: #c4c4c4;
+                }
+            }
+        }
+
+        .code {
+            border: 1px dashed #ced6e0;
+            width: 14.375rem;
+            position: relative;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.25rem;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                padding: 0.75rem;
+                line-height: 1.5rem;
+            }
+
+            span {
+                font-weight: 600;
+            }
+
+            .btn-copy {
+                padding: 0;
+                border: 0;
+                background: none;
+                @include center-y;
+                right: 1rem;
+                font-size: 0;
+            }
+        }
+
+        .btn {
+            font-size: 1rem;
+            width: 14.375rem;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+
+        }
+
+        .promocode-value {
+            @include center-x;
+            padding: 0.5rem;
+            white-space: nowrap;
+            color: #fff;
+            background: $primary;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            top: -23px;
+            font-weight: 600;
         }
     }
 }

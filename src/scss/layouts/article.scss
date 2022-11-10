@@ -1,8 +1,38 @@
 .article {
+
+    .aligncenter {
+        margin: 0 auto 20px auto;
+        display: table;
+    }
+
+    .alignleft {
+        float: left;
+        margin-right: 20px;
+        @include media-breakpoint-down('lg') {
+            max-width: 40%;
+            margin-right: 10px;
+        }
+    }
+
+    .alignright {
+        float: right;
+        margin-left: 20px;
+
+        @include media-breakpoint-down('lg') {
+            max-width: 40%;
+            margin-left: 10px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     figure {
         text-align: center;
 
-        .wp-caption {
+        .wp-caption-text {
             color: rgba(45, 62, 80, 0.5);
             font-size: 0.875rem;
             margin-top: 0.75rem;
@@ -27,7 +57,7 @@
         @extend .blue;
         margin-left: 1rem;
 
-        li {
+        > li {
 
             & + li {
                 margin-top: 0.5rem;
@@ -40,7 +70,7 @@
         counter-reset: list;
         padding-left: 0.25rem;
 
-        li {
+        > li {
             padding-left: 2rem;
             position: relative;
 
@@ -56,6 +86,7 @@
                 height: 1.25rem;
                 border: 1px solid $primary;
                 font-size: 0.75rem;
+                background: none;
             }
 
 
@@ -63,12 +94,59 @@
                 margin-top: 0.75rem;
             }
         }
+
+        &.with-line {
+            margin-left: 0.5rem;
+            padding-left: 0;
+
+            > li {
+                padding: 0 0 1.5rem 1.125rem;
+
+                b, strong {
+                    display: inline-block;
+                    line-height: 1.25;
+                }
+
+                &:before {
+                    content: '';
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    border: 0.25rem solid #00afca;
+                    background-color: #ffffff;
+                    top: 0;
+                    left: -0.5rem;
+                    z-index: 1;
+                }
+
+                &:after {
+                    @include pseudo;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: $primary;
+                    width: 0.25rem;
+                }
+
+                & + li {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 
-    blockquote {
+    blockquote, .blockquote {
         background: $secondary;
         padding: 1rem;
         border-left: 4px solid $primary;
+        font-size: .875rem;
 
         &.v-2 {
             padding: 0 0 0 2rem;
@@ -81,10 +159,33 @@
                 @include pseudo;
                 top: 4px;
                 left: 2px;
-                background: url("../img/icon-quote.svg") no-repeat;
+                background: url("../img//icon-quote.svg") no-repeat;
                 width: 1rem;
                 height: 0.75rem;
             }
         }
     }
+
+    a {
+        text-decoration: none;
+        color: $primary;
+
+        &:hover {
+            border-bottom: 1px solid rgba(38, 185, 207, 0.3);
+        }
+    }
+
+    .gallery {
+        display: flex;
+        //overflow-x: auto;
+        gap: 1rem;
+        align-items: center;
+
+        .item {
+            flex: 1 0 auto;
+            width: 200px;
+            padding-bottom: 10px;
+        }
+    }
+
 }

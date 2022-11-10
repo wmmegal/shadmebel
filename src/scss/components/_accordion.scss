@@ -20,6 +20,17 @@
                 padding: 3px;
                 transform: rotate(-45deg);
                 margin-top: -5px;
+                transition: 0.3s all;
+            }
+
+            &:not(.collapsed) {
+                background: none;
+                color: initial;
+
+                &:after {
+                    margin-top: 0;
+                    transform: rotate(135deg);
+                }
             }
         }
     }

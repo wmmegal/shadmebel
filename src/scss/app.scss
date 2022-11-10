@@ -6,6 +6,7 @@
 //
 
 @import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/maps";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/utilities";
 
@@ -37,6 +38,7 @@
 @import "node_modules/bootstrap/scss/close";
 @import "node_modules/bootstrap/scss/modal";
 @import "node_modules/bootstrap/scss/spinners";
+@import "node_modules/bootstrap/scss/popover";
 
 // Helpers
 @import "node_modules/bootstrap/scss/helpers";
@@ -58,6 +60,8 @@
 //vendors
 @import "vendors/range-slider";
 @import "vendors/glide.core";
+@import "vendors/fancybox";
+@import "vendors/overscrollbars";
 
 //components
 @import "components/stars";
@@ -79,6 +83,19 @@
 @import "components/card-fixed";
 @import "components/glide-arrows";
 @import "components/list-dark-links";
+@import "components/card-sticky";
+@import "components/author";
+@import "components/likes";
+@import "components/alert";
+@import "components/tabs";
+@import "components/card-blog";
+@import "components/card-list";
+@import "components/card-content";
+@import "components/paginate-links";
+@import "components/card-post-in-content";
+@import "components/alert-offer";
+@import "components/link-back";
+
 
 //layouts
 @import "layouts/header";
@@ -89,3 +106,9 @@
 @import "layouts/nav";
 @import "layouts/comments";
 @import "layouts/contact-form";
+@import "layouts/search";
+@import "layouts/comments-listing";
+@import "layouts/promocodes-coupones";
+@import "layouts/compare-cards";
+@import "layouts/menu";
+@import "layouts/nav-mobile";

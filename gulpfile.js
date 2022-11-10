@@ -1,5 +1,6 @@
 global.$ = {
     gulp: require('gulp'),
+    sass: require('gulp-sass')(require('sass')),
     gp: require('gulp-load-plugins')(),
     browserSync: require('browser-sync').create(),
     gcmq: require('gulp-group-css-media-queries'),

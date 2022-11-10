@@ -3,9 +3,50 @@
         color: rgba(#FFF, 0.8);
     }
 
+    .card-header-mobile {
+        align-items: center;
+
+        h1 {
+            flex-basis: 100%;
+        }
+
+        figure {
+            width: 6.875rem;
+        }
+
+        dl {
+            @include flex;
+            color: #fff;
+
+            dt {
+                width: 4.75rem;
+            }
+
+            dd {
+                .icon-star {
+                    width: 0.875rem;
+                    height: 0.875rem;
+                    fill: #fec50c;
+                }
+
+                a {
+                    @include link;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
     figure {
         width: 7.75rem;
         text-align: center;
+        flex-shrink: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         @include media-breakpoint-down(md) {
             width: 100%;
         }
@@ -22,7 +63,7 @@
         }
 
         a {
-            color: rgba(#FFF, 0.8);
+            @include link;
         }
     }
 
@@ -31,9 +72,70 @@
             font-weight: normal;
             margin-bottom: 0.25rem;
         }
+
         dd {
             font-weight: 500;
             color: #fff;
+            font-size: 1rem;
+            @include media-breakpoint-down(md) {
+                font-size: 0.875rem;
+            }
+
+
+            a {
+                color: #fff;
+            }
         }
+    }
+
+    .btn-show-details {
+        background: none;
+        @include flex;
+        justify-content: center;
+        width: 100%;
+        border: none;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 500;
+        gap: 0.5rem;
+        position: relative;
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+
+        .icon-arr {
+            border: solid #FFF;
+            border-width: 0 0 2px 2px;
+            padding: 3px;
+            transform: rotate(-45deg);
+            position: relative;
+            top: -1px;
+        }
+
+        &:before {
+            @include pseudo;
+            background: linear-gradient(rgba($primary, 0), $primary);
+            height: 60px;
+            top: -60px;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 60px;
+    width: auto !important;
+    font-size: 0.875rem;
+    padding: 0;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    z-index: 99;
+
+    &.full {
+        right: 0.75rem;
     }
 }

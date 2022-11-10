@@ -75,6 +75,107 @@
     fill: #FFF;
 }
 
-.icon-home-2 {
+.icon-arr-up {
+    width: 0.75rem;
+    height: 0.813rem;
+    stroke: #00afca;
+}
 
+.icon-dots {
+    position: relative;
+    display: inline-flex;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: #d9d9d9;
+    margin: 0 0.625rem;
+
+    &:before, &:after {
+        @include pseudo;
+        display: flex;
+        width: 0.25rem;
+        height: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: #d9d9d9;
+    }
+
+    &:before {
+        left: -0.625rem;
+    }
+
+    &:after {
+        right: -0.625rem;
+    }
+}
+
+.icon-search {
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 2px;
+}
+
+.icon-cross {
+    fill: none;
+    stroke: #adb3ba;
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-tw {
+    width: 1.25rem;
+    height: 1rem;
+    fill: rgba(45, 62, 80, 0.3);
+}
+
+.icon-ok {
+    width: 0.75rem;
+    height: 1.25rem;
+    fill: rgba(45, 62, 80, 0.3);
+}
+
+.icon-mail-ru {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: rgba(45, 62, 80, 0.3);
+}
+
+.icon-vk {
+    width: 1.25rem;
+    height: 0.75rem;
+    fill: rgba(45, 62, 80, 0.3);
+}
+
+.icon-fb {
+    width: 11px;
+    height: 20px;
+    fill: rgba(45, 62, 80, 0.3);
+}
+
+.icon-copy {
+    width: 1rem;
+    height: 1rem;
+    fill: rgba(45, 62, 80, 0.5);
+}
+
+.icon-alert {
+    width: 1.375rem;
+    height: 1.375rem;
+    fill: #00afca;
+}
+
+.icon-compare {
+    stroke: #FFF;
+    stroke-width: 2px;
+    width: 1rem;
+    height: 1.25rem;
+}
+
+.icon-fav {
+    stroke: #FFF;
+    stroke-width: 2px;
+    fill: none;
+    width: 1.375rem;
+    height: 1.375rem;
 }

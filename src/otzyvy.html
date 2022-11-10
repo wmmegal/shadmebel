@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page %}
+    <div class="py-12">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb breadcrumb-dark mb-0">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Займы</li>
+                </ol>
+            </nav>
+            <h1 class="mb-8">Отзывы клиентов</h1>
+            <div class="row">
+                <div class="col-lg-9">
+                    <form action="#" method="post" class="rounded p-6 border mb-6">
+                        <fieldset class="radio-toggles">
+                            <input type="radio" class="btn-check" name="cat" id="cat-1" autocomplete="off" checked>
+                            <label class="btn btn-outline-light btn-sm" for="cat-1">
+                                <span>Все отзывы</span>
+                                <small>1 260</small>
+                            </label>
+                            {% for i in range(2, 12)  %}
+                                <input type="radio" class="btn-check" name="cat" id="cat-{{ i }}" autocomplete="off" checked>
+                                <label class="btn btn-outline-light btn-sm" for="cat-{{ i }}">
+                                    <span>Категория {{  i }}</span>
+                                    <small>1 260</small>
+                                </label>
+                            {% endfor %}
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

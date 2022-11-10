@@ -1,9 +1,21 @@
 #header {
-    background: url("../img/bg-header.svg") no-repeat center 8px;
+    background: url("../img//bg-header.svg") no-repeat center 8px;
     position: relative;
 
     .container {
         z-index: 10;
+    }
+
+    .logo {
+        @include media-breakpoint-down(md) {
+            max-width: 10rem;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
     }
 
     .badge {
@@ -25,5 +37,89 @@
         .icon-burger {
             @include burger(20px, 2px, 4px, #FFF);
         }
+    }
+
+    .lang-switcher {
+        .dropdown-toggle {
+            height: 2.375rem;
+            border-radius: 0.25rem;
+            background-color: #ffffff;
+            border: none;
+            padding: 0 0.5rem;
+            color: #2d3e50;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 500;
+            gap: 0.25rem;
+
+
+            &:after {
+                border: solid rgba(45, 62, 80, 0.3);
+                border-width: 0 0 1px 1px;
+                padding: 3px;
+                transform: rotate(-45deg);
+                position: relative;
+            }
+
+            &.active {
+                border-radius: 0.25rem 0.25rem 0 0;
+
+                &:after {
+                    top: 3px;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 0 0 0.25rem 0.25rem;
+            min-width: auto;
+            left: 0;
+            right: 0;
+            padding: 0;
+            border: none;
+            border-top: 1px solid #f5f5f4;
+
+            li {
+                a {
+                    display: flex;
+                    height: 2.375rem;
+                    border-radius: 0.25rem;
+                    align-items: center;
+                    background-color: #ffffff;
+                    border: none;
+                    padding: 0 0.5rem;
+                    color: #2d3e50;
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    gap: 0.25rem;
+                }
+            }
+        }
+    }
+
+    .link {
+        position: relative;
+
+        .count {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #fec50c;
+            position: absolute;
+            top: -0.25rem;
+            right: -0.5rem;
+            text-align: center;
+            font-size: 0.625rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+
+    .btn-search {
+        background: none;
+        padding: 0;
+        border: none;
     }
 }

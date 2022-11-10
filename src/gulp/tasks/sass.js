@@ -1,9 +1,9 @@
 module.exports = function () {
   $.gulp.task('sass', function () {
-    return $.gulp.src('src/scss/style.scss')
+    return $.gulp.src('src/scss/app.scss')
         .pipe($.gp.plumber())
         .pipe($.gp.sourcemaps.init())
-        .pipe($.gp.sass())
+        .pipe($.sass())
         .pipe($.gcmq())
         .pipe($.gp.autoprefixer())
         .pipe($.gp.csso())

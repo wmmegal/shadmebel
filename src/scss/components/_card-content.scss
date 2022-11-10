@@ -1,0 +1,76 @@
+.card-content {
+    position: relative;
+    background: #fff;
+    z-index: 1033;
+
+    @include media-breakpoint-down(lg) {
+        position: fixed;
+        right: 0;
+        bottom: -100%;
+        left: 0;
+        transition: 0.3s all;
+
+        &.show {
+            bottom: 0;
+        }
+    }
+
+    .wrap {
+        @include media-breakpoint-down(lg) {
+            max-height: 300px;
+            overflow: auto;
+            margin: 0 -1.5rem;
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+.btn-content {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    z-index: 99;
+    border: none;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.32);
+
+    .icon-content {
+        background: url("../img//icon-content.svg") no-repeat center;
+        width: 16px;
+        height: 14px;
+
+        &.cross {
+            background: url("../img//icon-cross-gray.svg") no-repeat center;
+        }
+    }
+
+    &.zindex {
+        z-index: 1034;
+    }
+}
+
+.reading-progress {
+    width: 52px;
+    height: 52px;
+    position: fixed;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    z-index: 100;
+
+    #reading-progress {
+        fill: none;
+        stroke: $blue;
+        stroke-width: 2px;
+        background: #fff;
+    }
+
+    &.zindex {
+        z-index: 1035;
+    }
+}

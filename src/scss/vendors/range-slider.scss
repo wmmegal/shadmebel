@@ -47,15 +47,15 @@
     cursor: pointer;
     display: inline-block;
     position: absolute;
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 1rem;
+    height: 1rem;
     border: 0.125rem solid #ffffff;
     background-color: $yellow;
     border-radius: 50%;
 }
 
 .rangeSlider__handle__horizontal {
-    top: -6px;
+    top: -8px;
 }
 
 .rangeSlider__handle__vertical {

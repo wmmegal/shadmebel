@@ -9,13 +9,13 @@
 
     > .container {
         position: relative;
-        z-index: 1;
+        z-index: 100;
     }
 
     &:before {
         @include pseudo;
         @include center-x;
-        background: url("../img/bg-map.svg") no-repeat center;
+        background: url("../img//bg-map.svg") no-repeat center;
         width: 666px;
         height: 317px;
         top: -4rem;
@@ -31,7 +31,7 @@
 }
 
 .bg-with-girl {
-    background: url("../img/bg-girl.png") no-repeat right bottom $secondary;
+    background: url("../img//bg-girl.png") no-repeat right bottom $secondary;
     @include media-breakpoint-down(lg) {
         background: $secondary;
     }
@@ -43,21 +43,91 @@
     display: none !important;
 }
 
-.link-back {
+a.link-light {
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba($light, 0.4);
+
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+
+.link-up {
+    @include flex;
+    gap: 0.5rem;
+    position: absolute;
+    top: 1.44rem;
+    right: 1.5rem;
+    font-size: 0.875rem;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1032;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.link-with-angle {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: 500;
-    color: #fff;
-    font-size: 0.875rem;
 
-    svg {
-        fill: $warning;
-        width: 1rem;
-        height: 0.625rem;
+    .angle {
+        border: solid $primary;
+        padding: 3px;
+        transform: rotate(-45deg);
+
+        &.left {
+            border-width: 2px 0 0 2px;
+        }
+
+        &.right {
+            border-width: 0 2px 2px 0;
+        }
+
+        &.up {
+            border-width: 2px 2px 0 0;
+        }
     }
-    
-    &:hover {
-        color: #fff;
+
+    &.text-gray {
+        color: #adb3ba;
+
+        .angle {
+            border-color: inherit;
+        }
+    }
+}
+
+.calc {
+    .h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-gray {
+        color: $gray-500;
+    }
+
+    .col {
+        .btn {
+            @include center-x;
+            bottom: -18px;
+            white-space: nowrap;
+        }
+    }
+
+    .border-bottom {
+        border-color: #FFF !important;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

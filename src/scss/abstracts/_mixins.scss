@@ -142,3 +142,13 @@ $sass-burger-add-vendor-prefixes: true !default;
         width: 24px;
     }
 }
+
+@mixin link($color: #FFF) {
+    color: rgba($color, 0.8);
+    text-decoration: none;
+    border-bottom: 1px solid rgba($color, 0.4);
+
+    &:hover {
+        border-color: transparent;
+    }
+}
