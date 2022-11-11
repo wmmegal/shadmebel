@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block page %}
+    <div class="py-12">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb breadcrumb-dark mb-0">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Займы</li>
+                </ol>
+            </nav>
+            <article class="article">
+                <h1 class="mb-5">О нас</h1>
+                <p>Спортивная редакция Metaratings – это команда журналистов, любящих свое дело и разбирающихся в нем
+                    досконально. Это самые интересные новости, статьи и интервью с самыми яркими спикерами, а также
+                    инсайды и эксклюзивы из мира спорта.</p>
+                <p>Спортивная редакция Metaratings – это команда журналистов, любящих свое дело и разбирающихся в нем
+                    досконально. Это самые интересные новости, статьи и интервью с самыми яркими спикерами, а также
+                    инсайды и эксклюзивы из мира спорта.</p>
+            </article>
+        </div>
+    </div>
+    <div class="bg-primary bg-opacity-10 py-6 py-md-12">
+        <div class="container">
+            <div class="h1 mb-6">Другие авторы</div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="card card-author p-4 p-md-6">
+                        <figure>
+                            <img src="img/img-author-avatar.jpg" alt="">
+                        </figure>
+                        <a href="#" class="h5">Наталья Мильчакова</a>
+                        <div class="card-status">Руководитель отдела арбитража</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-12">
+        <div class="container">
+            <div class="partners mb-5 mb-md-10">
+                <div class="h1 mb-6">Наши партнеры</div>
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="partner">
+                            <figure>
+                                <img src="img/img-partner.svg" alt="">
+                            </figure>
+                            <p class="text-gray small">Winline - Медийная Футбольная Лига</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="col-12 col-lg-6">
+                    <div class="h1 mb-5">Контакты</div>
+                    <div class="row">
+                        <dl class="col-12 col-lg-6">
+                            <dt class="text-gray small fw-normal">
+                                Редакция
+                            </dt>
+                            <dd>
+                                <a href="mailto:news@metaratings.ru" class="small">news@metaratings.ru</a><br>
+                                <small>+7 991 578 91 74</small>
+                            </dd>
+                        </dl>
+                        <dl class="col-12 col-lg-6">
+                            <dt class="text-gray small fw-normal">
+                                Отдел продаж
+                            </dt>
+                            <dd>
+                                <a href="mailto:news@metaratings.ru" class="small">news@metaratings.ru</a><br>
+                                <small>+7 991 578 91 74</small>
+                            </dd>
+                        </dl>
+                        <dl class="col-12 col-lg-6">
+                            <dt class="text-gray small fw-normal">
+                                Техническая поддержка
+
+                            </dt>
+                            <dd>
+                                <a href="mailto:tech@metaratings.ru" class="small">tech@metaratings.ru</a>
+                            </dd>
+                        </dl>
+                        <dl class="col-12 col-lg-6">
+                            <dt class="text-gray small fw-normal">
+                                Для устройства на работу
+                            </dt>
+                            <dd>
+                                <a href="mailto:job@metaratings.ru" class="small">job@metaratings.ru</a>
+                            </dd>
+                        </dl>
+                        <dl class="col-12">
+                            <dt class="text-gray small fw-normal">
+                                Адрес
+                            </dt>
+                            <dd class="small">
+                                Россия, 117342, г. Москва, ул. Бутлерова, д. 17, пом. № 278 (Бизнес центр «Neo Geo»)
+                            </dd>
+                        </dl>
+                        <p class="small mb-0">
+                            <a href="#">Свидетельство о регистрации СМИ серия ЭЛ № ФС77-74641</a> от 24 декабря 2018
+                            года выдано Федеральной службой по надзору в сфере связи, информационных технологий и
+                            массовых коммуникаций.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="h1 mb-5">Напишите нам</div>
+                    <form action="#" method="post" class="row g-4 g-md-6">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label text-light">Имя <span
+                                        class="text-danger">*</span></label>
+                            <input type="text" name="name" class="form-control border" id="name"
+                                   placeholder="Фамилия Имя Отчество">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label text-light">Электронная почта <span
+                                        class="text-danger">*</span></label>
+                            <input type="text" name="email" class="form-control border" id="email"
+                                   placeholder="Введите ваш e-mail">
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label text-light">Тема письма <span
+                                        class="text-danger">*</span></label>
+                            <input type="text" name="email" class="form-control border" id="email"
+                                   placeholder="Введите ваш e-mail">
+                        </div>
+                        <div class="col-12">
+                            <label for="text" class="form-label text-light">Текст письма <span
+                                        class="text-danger">*</span></label>
+                            <textarea name="text" class="form-control border" id="text"></textarea>
+                        </div>
+                        <div class="col-12 d-flex flex-wrap flex-md-nowrap align-items-center gap-4">
+                            <button type="button" class="btn btn-primary btn-sm flex-shrink-0">Отправить</button>
+                            <div class="small">
+                                Нажимая кнопку <a href="#">«Отправить»</a> вы соглашаетесь с политикой
+                                обработки персональных данных и пользовательским соглашением
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

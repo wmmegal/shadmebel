@@ -9,27 +9,281 @@
                     <li class="breadcrumb-item active" aria-current="page">Займы</li>
                 </ol>
             </nav>
-            <h1 class="mb-8">Отзывы клиентов</h1>
-            <div class="row">
+            <h1 class="mb-6">Отзывы клиентов</h1>
+            <div class="row mb-10">
                 <div class="col-lg-9">
-                    <form action="#" method="post" class="rounded p-6 border mb-6">
-                        <fieldset class="radio-toggles">
+                    <form action="#" method="post" class="comments-filter rounded p-4 p-md-6 border mb-6">
+                        <div class="radio-toggles mb-5">
                             <input type="radio" class="btn-check" name="cat" id="cat-1" autocomplete="off" checked>
                             <label class="btn btn-outline-light btn-sm" for="cat-1">
                                 <span>Все отзывы</span>
                                 <small>1 260</small>
                             </label>
-                            {% for i in range(2, 12)  %}
-                                <input type="radio" class="btn-check" name="cat" id="cat-{{ i }}" autocomplete="off" checked>
+                            {% for i in range(2, 12) %}
+                                <input type="radio" class="btn-check" name="cat" id="cat-{{ i }}" autocomplete="off"
+                                       checked>
                                 <label class="btn btn-outline-light btn-sm" for="cat-{{ i }}">
-                                    <span>Категория {{  i }}</span>
+                                    <span>Категория {{ i }}</span>
                                     <small>1 260</small>
                                 </label>
                             {% endfor %}
+                            <button type="button" class="btn btn-outline-light btn-sm">
+                                <i class="icon-dots"></i>
+                            </button>
+                        </div>
+                        <fieldset>
+                            <legend class="h5 mb-4">Подбор по рейтингу</legend>
+                            <div class="vstack gap-3">
+                                {% for i in range(5, 0, -1) %}
+                                    <div class="rating-row">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="rating"
+                                                   value="{{ i }}" id="rating-{{ i }}">
+                                            <label class="form-check-label" for="rating-{{ i }}">
+                                                {{ i }}
+                                            </label>
+                                        </div>
+                                        <div class="stars" data-rating="{{ i }}">
+                                            {% for j in range(1, 6) %}
+                                                <svg class="icon-star" data-value="{{ j }}">
+                                                    <use href="img/symbol/sprite.svg#icon-star"></use>
+                                                </svg>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="rating-row-scale">
+                                            <div class="rating-row-scale-value" style="width: 40%"></div>
+                                        </div>
+                                        <div class="rating-row-count">1765</div>
+                                        <div class="rating-row-percent">42%</div>
+                                    </div>
+                                {% endfor %}
+                            </div>
                         </fieldset>
                     </form>
+                    <div class="mb-7 pb-7 border-bottom comments-sort">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Сначала полезные
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <div class="quick-search">
+                            <svg class="icon-search">
+                                <use href="img/symbol/sprite.svg#icon-search"></use>
+                            </svg>
+                            <input class="form-control" type="text" placeholder="Поиск" aria-label="Поиск">
+
+                            <ul class="quick-search-results">
+                                <li>Альфа Кредит</li>
+                                <li>Альфа Кредит</li>
+                                <li>Альфа Кредит</li>
+                                <li class="no-results"><p class="mb-0">К сожалению, по вашим параметрам ничего не
+                                        найдено, попробуйте изменить их</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="comments mb-6 mb-md-12">
+                        {% for i in range(0, 3) %}
+                            <div class="comment mb-6 pb-6 border-bottom with-img">
+                                <div class="comment-head d-flex flex-wrap gap-2 gap-md-4 small mb-4">
+                                    <div class="stars" data-rating="4">
+                                        {% for i in range(1, 6) %}
+                                            <svg class="icon-star" data-value="{{ i }}">
+                                                <use href="img/symbol/sprite.svg#icon-star"></use>
+                                            </svg>
+                                        {% endfor %}
+                                    </div>
+                                    <span class="fw-bolder">Анатолий</span>
+                                    <span class="text-light">16 сентября 2019</span>
+                                    <figure>
+                                        <img src="img/img-card.jpg" class="border rounded-1" alt="">
+                                    </figure>
+                                </div>
+                                <div class="comment-text small mb-4">
+                                    <p class="mb-0">Сотрудники CreditPlus названивают с напоминаем об уже оплаченном
+                                        займе в 8
+                                        утра, это как вообще?! Не берите здесь займ. Поддержки нормальной нет, только на
+                                        почту
+                                        пиши и не факт, что ответят.</p>
+                                </div>
+                                <div class="comment-text-with-icon position-relative small mb-4">
+                                    <div class="icon bg-success">
+                                        <svg class="icon-plus">
+                                            <use href="img/symbol/sprite.svg#icon-plus"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="mb-1 fw-bolder">Плюсы</p>
+                                    <p class="mb-0">Хорошие проценты по ставке</p>
+                                </div>
+                                <div class="comment-text-with-icon position-relative small mb-4">
+                                    <div class="icon bg-danger">
+                                        <svg class="icon-minus">
+                                            <use href="img/symbol/sprite.svg#icon-minus"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="mb-2 fw-bolder">Минусы</p>
+                                    <p class="mb-0">Система одобрения заявок в Moneyman мне тоже вообще не ясна. Когда
+                                        не было
+                                        займов нигде, тогда не дали. Когда было еще 3 текущих займа, то Moneyman
+                                        одобрили.
+                                        Не рекомендую!</p>
+                                </div>
+                                <div class="comment-gallery d-flex flex-wrap gap-2 fs-0 ">
+                                    {% for i in range(0, 3) %}
+                                        <a href="#"><img src="img/img-comment.jpg" width="120" height="80"
+                                                         loading="lazy"
+                                                         class="rounded-1" alt=""></a>
+                                    {% endfor %}
+                                </div>
+                                <div class="comment-likes d-flex align-items-center gap-4">
+                                    <button type="button" class="d-inline-flex gap-2 align-items-center">
+                                        <svg class="icon-thumb-up">
+                                            <use href="img/symbol/sprite.svg#icon-thumb-up"></use>
+                                        </svg>
+                                        <span class="text-light">32</span>
+                                    </button>
+                                    <button type="button" class="d-inline-flex gap-2 align-items-center">
+                                        <svg class="icon-thumb-down">
+                                            <use href="img/symbol/sprite.svg#icon-thumb-down"></use>
+                                        </svg>
+                                        <span class="text-light">5</span>
+                                    </button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="paginate-links">
+                        <span>1</span>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </div>
                 </div>
-                <div class="col-lg-3"></div>
+                <div class="col-lg-3">
+                    <div class="border rounded p-6 mb-6">
+                        <div class="h3">Оставьте отзыв</div>
+                        <p class="small">Расскажите о своем опыте использования микрофинансовых услуг</p>
+                        <a href="#add-comments" class="btn btn-warning w-100">Написать отзыв</a>
+                    </div>
+                    <div class="border rounded p-6 mb-6">
+                        <div class="h3 mb-4">Рейтинг займов</div>
+                        <ol class="offer-list">
+                            {% for i in range(0, 3) %}
+                                <li>
+                                    <figure class="mb-0">
+                                        <img src="img/img-card.jpg" width="212" height="124" loading="lazy" alt="">
+                                    </figure>
+                                    <div>
+                                        <div class="d-flex align-items-center gap-1">
+                                            <svg class="icon-star">
+                                                <use href="img/symbol/sprite.svg#icon-star"></use>
+                                            </svg>
+                                            <b class="small">4.9</b>
+                                        </div>
+                                        <a href="#" class="link-light small">2 отзыва</a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="bg-secondary rounded p-4 p-md-6" id="add-comments">
+                        <div class="h1 mb-4">Добавить отзыв</div>
+                        <form action="#" method="post" class="row g-4 g-md-6">
+                            <div class="col-12">
+                                <div class="position-relative">
+                                    <label for="offer" class="form-label text-light">Организация <span
+                                                class="text-danger">*</span></label>
+                                    <input type="text" name="offer" class="form-control" id="offer"
+                                           placeholder="Введите название банка или организации">
+                                    <div class="vstack search-results bg-white rounded shadow">
+                                        {% for i in range(0, 3) %}
+                                            <div class="p-2 border-top d-flex align-items-center">
+                                                <figure class="me-4 mb-0 flex-shrink-0">
+                                                    <a href="#"><img src="img/img-card.jpg" alt=""></a>
+                                                </figure>
+                                                <a href="#" class="fw-medium d-none d-md-block">Займер</a>
+                                                <div class="d-flex ms-auto rating ms-auto">
+                                                    <svg class="icon-star">
+                                                        <use href="img/symbol/sprite.svg#icon-star"></use>
+                                                    </svg>
+                                                    <span class="fw-bolder">4.9</span>
+                                                    <span class="text-gray small">(5 отзывов)</span>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <label for="name" class="form-label text-light">ФИО <span
+                                            class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control" id="name"
+                                       placeholder="Фамилия Имя Отчество">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label text-light">Электронная почта <span
+                                            class="text-danger">*</span></label>
+                                <input type="text" name="email" class="form-control" id="email"
+                                       placeholder="Введите ваш e-mail">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="rating" class="form-label text-light">Ваша оценка <span class="text-danger">*</span></label>
+                                <div class="bg-white rounded-1 p-4">
+                                    <div class="stars" data-rating="4">
+                                        {% for i in range(1, 6) %}
+                                            <svg class="icon-star" data-value="{{ i }}">
+                                                <use href="img/symbol/sprite.svg#icon-star"></use>
+                                            </svg>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <input type="hidden" id="rating" name="rating">
+                            </div>
+                            <div class="col-12">
+                                <label for="comment" class="form-label text-light">Ваш комментарий <span
+                                            class="text-danger">*</span></label>
+                                <textarea name="comment" class="form-control" id="comment"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="advantages" class="form-label text-light">Расскажите о преимуществах</label>
+                                <input type="text" name="advantages" class="form-control" id="advantages">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="disadvantages" class="form-label text-light">Расскажите о
+                                    недостатках</label>
+                                <input type="text" name="disadvantages" class="form-control" id="disadvantages">
+                            </div>
+                            <div class="col-12">
+                                <div class="files-area">
+                                    Нажмите или перетащите для загрузки фотографии
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="text-light small">
+                                    Поля, обязательные для заполнения <span class="text-danger">*</span>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex flex-wrap flex-md-nowrap align-items-center gap-4">
+                                <button type="button" class="btn btn-primary flex-shrink-0">Добавить отзыв</button>
+                                <div class="small">
+                                    Нажимая кнопку <a href="#">«Добавить отзыв»</a> вы соглашаетесь с политикой
+                                    обработки персональных данных и пользовательским соглашением
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

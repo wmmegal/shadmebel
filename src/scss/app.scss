@@ -95,7 +95,11 @@
 @import "components/card-post-in-content";
 @import "components/alert-offer";
 @import "components/link-back";
-
+@import "components/radio-toggles";
+@import "components/rating-row";
+@import "components/offer-list";
+@import "components/search-results";
+@import "components/card-author";
 
 //layouts
 @import "layouts/header";
@@ -112,3 +116,4 @@
 @import "layouts/compare-cards";
 @import "layouts/menu";
 @import "layouts/nav-mobile";
+@import "layouts/author";
