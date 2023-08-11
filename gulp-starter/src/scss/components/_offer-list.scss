@@ -1,0 +1,53 @@
+.offer-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: list;
+
+    li {
+        padding-left: 2.5rem;
+        position: relative;
+        @include flex-inline;
+
+        figure {
+            width: 5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        a {
+            color: #969fa8;
+            border-color: #969fa8;
+        }
+
+        .icon-star {
+            fill: $warning;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        &:before {
+            content: counter(list);
+            counter-increment: list;
+            @include center-y;
+            left: 0;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            background-color: $primary;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        & + li {
+            margin-top: 1.25rem;
+        }
+    }
+}

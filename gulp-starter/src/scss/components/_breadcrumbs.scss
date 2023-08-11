@@ -1,0 +1,23 @@
+.breadcrumb {
+    font-size: 0.875rem;
+
+    .breadcrumb-item {
+        a {
+            color: rgba(#FFF, 0.8);
+        }
+    }
+
+    &.breadcrumb-dark {
+        .breadcrumb-item {
+            color: #adb3ba;
+
+            a {
+                color: #adb3ba;
+            }
+
+            &:before {
+                color: #adb3ba;
+            }
+        }
+    }
+}

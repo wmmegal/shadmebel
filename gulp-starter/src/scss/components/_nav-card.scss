@@ -1,0 +1,26 @@
+.nav-card {
+    display: flex;
+    flex-direction: column;
+
+    .nav-link {
+        padding: 0.5rem 0;
+        font-weight: 500;
+        position: relative;
+        font-size: 0.875rem;
+        color: $gray-500;
+
+        &.active, &:hover {
+            color: $dark;
+
+            &:after {
+                @include pseudo;
+                background: $primary;
+                top: 0;
+                left: -1.5rem;
+                right: 0;
+                bottom: 0;
+                width: 2px;
+            }
+        }
+    }
+}

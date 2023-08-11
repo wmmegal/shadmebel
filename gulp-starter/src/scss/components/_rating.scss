@@ -1,0 +1,9 @@
+.rating {
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.radio-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .btn-outline-light {
+        font-weight: normal;
+        gap: 0.55rem;
+        color: #3d5065;
+
+        small {
+            color: #969fa8;
+        }
+    }
+
+    .btn-check:checked + .btn-outline-light, .btn-outline-light:hover {
+        border-color: $primary;
+        color: $primary;
+        background: none;
+    }
+
+    button.btn-outline-light {
+        font-size: 0;
+
+        .icon-dots {
+            vertical-align: middle;
+        }
+    }
+}

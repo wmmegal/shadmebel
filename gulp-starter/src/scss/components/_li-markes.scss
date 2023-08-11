@@ -1,0 +1,48 @@
+.markers {
+    @extend .list-unstyled;
+
+    li {
+        padding-left: 0.875rem;
+        position: relative;
+
+        &:before {
+            @include pseudo;
+            top: 0.45rem;
+            left: 0;
+            margin-top: 1px;
+            width: 0.375rem;
+            height: 0.375rem;
+            border-radius: 50%;
+        }
+    }
+
+    &.yellow {
+        li {
+            &:before {
+                background-color: $yellow;
+            }
+        }
+    }
+
+    &.blue {
+        li {
+            &:before {
+                background-color: $primary;
+            }
+        }
+    }
+
+    &.list-inline {
+        li {
+            @include media-breakpoint-up(xl) {
+                &:first-child {
+                    padding-left: 0;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

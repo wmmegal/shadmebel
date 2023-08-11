@@ -1,0 +1,16 @@
+.card-fixed {
+    z-index: 100000;
+    figure {
+        width: 5.375rem;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}

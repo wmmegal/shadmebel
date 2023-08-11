@@ -1,0 +1,38 @@
+.card-horizontal {
+    > .row > .col-md-4 {
+        border-right: 1px solid #FFF;
+        @include media-breakpoint-down(md) {
+            border-right: 0;
+        }
+
+    }
+
+    figure {
+        height: 9rem;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    dl {
+        font-size: 0.875rem;
+
+        dt {
+            font-weight: normal;
+            color: #adb3ba;
+        }
+
+        dd {
+            font-weight: 500;
+        }
+    }
+
+    .btn {
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
+    }
+}

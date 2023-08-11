@@ -1,0 +1,48 @@
+.sticker {
+    line-height: 2rem;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0 1.25rem 0 0.5rem;
+
+    &.green {
+        background: $green;
+
+        &:before {
+            @include pseudo;
+            width: 0.5rem;
+            height: 2rem;
+            background: url("../img//bg-sticker-green.svg") no-repeat;
+            top: 0;
+            left: -0.5rem;
+        }
+
+    }
+
+    &.violet {
+        background: $violet;
+        border-radius: 0.313rem 0 0 0.313rem;
+    }
+
+    &.red {
+        background: $red;
+        right: 0;
+
+        &:before {
+            @include pseudo;
+            width: 0.5rem;
+            height: 2rem;
+            background: url("../img//bg-sticker-red.svg") no-repeat;
+            top: 0;
+            left: -0.5rem;
+        }
+    }
+
+    &.yellow {
+        background: $warning;
+        border-radius: 0 0.313rem 0.313rem 0;
+    }
+}
