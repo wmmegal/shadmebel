@@ -1,0 +1,61 @@
+{% extends "layout-2.html" %}
+
+{% block page %}
+
+<div class="main container clr">
+    <div class="path">
+        <a href="/">Главная</a> &gt; Отзывы        </div>
+    <article class="article">
+        <h1>Отзывы</h1>		                    <article class="response2">
+        <span>20.06.2021</span><br />
+        <b>Светлана</b><br />
+        <p>Заказывала кухню и прихожую! Большое спасибо за оперативность и качество изготовления и сборки! Быстро , оперативно, качественно! Хорошая организация работы! Спасибо всем! Обязательно буду обращаться ещё и буду рекомендовать друзьям!!!</p>
+    </article>
+
+        <article class="response2">
+            <span>13.08.2018</span><br />
+            <b>Анна</b><br />
+            <p>Купили диван Эвелина, не зная кто производитель, когда нам его привезли, я увидела в документах, и стала искать в интернете вашу фирму, чтобы поблагодарить за вашу работу. Диван безумно красивый и качественно выполнен, мы в восторге от него, все знакомые спрашивают теперь где мы покупали, тоже хотят такой. Спасибо, вы молодцы!</p>
+        </article>
+
+        <article class="response2">
+            <span>12.09.2016</span><br />
+            <b>наталия</b><br />
+            Увидела кухни на выставке в Краснодаре  и боялась сделать расщет, думала что цены не сложешь , уж больно они были красивые , и что самое главное - видные места, которые делают из МДФ , шпонированные . Получилась конфетка!! Там же заказали круглый стол под цвет кухни, овальный большой стол и  8 стульев ! Чтобы выбрать фарнитуру , съездили в Отрадный  и в их магазине выбрали диван, банкеты и пуф   . Все в Краснодар  привезли бесплатно, устанавливали  целый день. Я очень довольна и благодарна Шаваршу  и его коллективу!!                    </article>
+
+        <article class="response2">
+            <span>03.06.2016</span><br />
+            <b>Марина</b><br />
+            Заказывали обеденный стол со стульями для дома, всё очень понравилось, помогли подобрать цвет ткань для стульев. Изготовили всё очень быстро. Мы остались довольны. Планируем заказать у них кухню (они у них безумно красивые) и диван. Своим знакомым будем советовать  только вашу фабрику ))))))                    </article>
+
+        <article class="response2">
+            <span>30.05.2016</span><br />
+            <b>Sergey</b><br />
+            Заказывал кухню по совету кума. Сделали замеры, подсказали как лучше оптимизировать и скомпоновать элементы, изготовили, установили - все на высшем уровне. Доволен, рекомендую фабрику друзьям.                    </article>
+
+
+        <div class="pages"></div>
+        <form action="guestbook" method="post">
+            <section class="form">
+                <header class="title">Оставить отзыв</header>
+                <input class="itemfeild" placeholder="Ваше имя" name="name" required type="text" />
+                <input class="itemfeild" placeholder="Email" name="eml" required type="text" />
+                <input class="itemfield" placeholder="Повторите Email" name="email" type="text" />
+                <input class="itemfield" placeholder="URL" name="url" type="text" />
+                <textarea name="body" required placeholder="Сообщение"></textarea>
+                <label class="checkbox-agree">
+                    <input type="checkbox" name="agree" value="1">
+                    <span>Отметьте флажок, если вы не робот</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span>Я соглашаюсь с <a href="/content/private_policy">политикой конфиденциальности</a> и даю свое согласие на обработку моих персональных данных</span>
+                </label>
+                <button class="btn btn-order" disabled="disabled">Отправить</button>
+            </section>
+        </form>
+
+    </article>
+</div>
+<div class="map"><script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=KxsY8IzttEpRNdKwge52meFvBImuXMrh&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script></div>
+{% endblock %}

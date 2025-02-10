@@ -1,0 +1,412 @@
+// custom variables
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "layouts/reset";
+@use "layouts/old";
+
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+
+    .icon-burger {
+        @include mixins.burger(30px, 4px, 4px, #fff)
+    }
+
+    &.active {
+        .icon-burger {
+            @include mixins.burger-to-cross(4px, 4px)
+        }
+    }
+}
+
+
+.contact-buttons {
+    background: url("../img/bg-buttons.jpg") no-repeat center;
+    background-size: cover;
+    padding: 44px 0;
+    margin-top: 30px;
+
+    .title {
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 36px;
+
+        a {
+            width: 323px;
+            color: #fff;
+            text-align: center;
+            line-height: 63px;
+            background-color: #96bf3d;
+            font-size: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.btn-wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+#contact-modal {
+    max-width: 622px;
+    padding: 50px 96px;
+    background-color: #28201e;
+    display: none;
+
+    .modal-content {
+        .title {
+            color: #fff;
+        }
+
+        .form {
+            input[type=text], textarea {
+                width: 100%;
+                margin: 0 0 20px 0;
+                box-sizing: border-box;
+            }
+
+            .checkbox {
+                color: #fff;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+
+.fancybox-skin {
+    padding: 0 !important;
+
+    .fancybox-inner {
+        min-width: 622px;
+        width: 100% !important;
+    }
+}
+
+@include mixins.media-breakpoint-down('lg') {
+    #contact-modal {
+        max-width: 340px;
+        padding: 20px;
+
+        .modal-content {
+            .title {
+                color: #fff;
+            }
+
+
+            .btn-close {
+                right: 10px;
+            }
+        }
+    }
+
+    .fancybox-skin {
+        .fancybox-inner {
+            min-width: 340px;
+        }
+    }
+
+    .btn-wa {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    .wrap {
+        position: static;
+        padding-bottom: 0;
+    }
+
+    .btn-menu {
+        display: flex;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .header {
+        height: auto;
+        margin-top: 40px;
+        background-size: cover;
+        padding-bottom: 20px;
+
+        .nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 10;
+
+            ul {
+                display: none;
+
+                li {
+                    float: none;
+                    text-align: center;
+                }
+            }
+        }
+
+        .tel {
+            width: 150px;
+
+            a {
+                padding: 10px 0;
+
+                img {
+                    display: none;
+                }
+
+                span {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    .wrap {
+        .header {
+            background-size: cover;
+            height: auto;
+
+            .logo {
+                position: static;
+                text-align: left;
+
+                img {
+                    width: 180px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .category {
+        padding: 20px 0;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        li {
+            float: none;
+            width: calc(50% - 5px);
+            margin-right: 0;
+        }
+    }
+
+    #tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        li {
+            border-right: 0;
+            float: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+
+    .catalog {
+        .box {
+
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            .item {
+                width: calc(50% - 5px);
+                margin: 0;
+                float: none;
+            }
+        }
+
+        .box.visible {
+            display: flex;
+        }
+    }
+
+    .info {
+        background-size: cover;
+        padding-bottom: 10px;
+
+        .container {
+            height: auto;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            li {
+                float: none;
+                margin: 0;
+                width: auto;
+            }
+        }
+    }
+
+    .contact-form {
+        background-size: cover;
+        padding: 20px 0;
+
+        .container {
+            height: auto;
+
+            .form {
+                input, textarea {
+                    float: none;
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 0;
+
+            .copyright {
+                float: none;
+                width: auto;
+                padding: 0;
+                order: 1;
+            }
+
+            address {
+                float: none;
+                width: auto;
+                order: 0;
+                padding-top: 0;
+            }
+        }
+    }
+
+    .wrap {
+        .map {
+            position: static;
+            margin-top: 30px;
+        }
+
+        .footer {
+            position: static;
+        }
+    }
+
+    .article {
+        .form {
+            input[type=text], textarea {
+                width: 100%;
+                margin: 0 0 15px 0;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .thumbs {
+        ul {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            li {
+                float: none;
+                width: calc(50% - 5px);
+                margin-right: 0;
+            }
+        }
+    }
+
+    .colors {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+                float: none;
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    .info-2 {
+        background: #28201e;
+        height: auto;
+        padding: 20px 0;
+
+        .tel-2 {
+            line-height: 1.2;
+        }
+    }
+
+    .contact-buttons {
+        padding: 30px 20px;
+
+        .buttons {
+            gap: 20px;
+
+            a {
+                width: 100%;
+            }
+        }
+    }
+}

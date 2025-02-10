@@ -1,0 +1,49 @@
+{% extends "layout-2.html" %}
+
+{% block page %}
+
+<div class="main container clr">
+    <div class="path">
+        <a href="/">Главная</a> &gt; Контакты        </div>
+    <article class="article">
+        <h1>Контакты</h1>		<p><b>ООО &quot;Шад-мебель&quot;</b></p>
+
+        <p><b>Наш адрес:</b> 352290, Краснодарский край, Отрадненский район, ст. Отрадная, ул. Братская, 170</p>
+
+        <p><b>Телефоны:<span style="font-size:14px;"><span style="color:#800080;"><em>Руководитель предприятия</em></span><em><span style="color:#000000;">&nbsp; </span></em></span></b>+7 (918) 100-00-50</p>
+
+        <p><span style="color:#800080;"><span style="font-size: 14px;"><strong><span style="font-family: arial, helvetica, sans-serif;"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Кухни и столовые группы(столы,стулья)&nbsp; </em></span></strong></span></span>+7(86144) 3-32-32, &nbsp; +7 (86144) 3-36-94</p>
+
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; моб.телефоны&nbsp; +7 (938) 427-43-83&nbsp;&nbsp;&nbsp; +7(928) 846-09-39&nbsp;&nbsp; +7(967) 658-35-47</p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#800080;"><span style="font-size: 14px;"><strong><span style="font-family: arial, helvetica, sans-serif;"><em>Мягкие комплекты</em></span></strong></span></span> +7 (86144) 3-32-32,&nbsp; +7 (86144) 3-36-94,&nbsp; +7 (988) 953-00-00</p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:14px;">&nbsp;&nbsp;&nbsp; <em><strong><span style="color:#800080;">Отдел доставки&nbsp; </span></strong></em>+7(938) 474-10-06,&nbsp; +7(962) 874-77-51</span></p>
+
+        <p>&nbsp;</p>
+
+        <p><b>E-mail:</b> <a href="mailto:info@shadmebel.ru"><span style="color:#FF0000;">info@shadmebel.ru</span></a></p>
+
+        <h2>Есть вопросы? Напишите нам!</h2>
+
+        <form action="/send" method="post" class="form">
+            <input class="itemfeild" placeholder="Ваше имя" name="name" required type="text" />
+            <input class="itemfeild" placeholder="Телефон" name="phone" type="text" />
+            <input class="itemfeild" placeholder="Email" name="eml" required type="text" />
+            <input class="itemfield" placeholder="Повторите Email" name="email" type="text" />
+            <input class="itemfield" placeholder="URL" name="url" type="text" />
+            <textarea name="body" required placeholder="Сообщение"></textarea>
+            <label class="checkbox-agree">
+                <input type="checkbox" name="agree" value="1">
+                <span>Отметьте флажок, если вы не робот</span>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                <span>Я соглашаюсь с <a href="/content/private_policy">политикой конфиденциальности</a> и даю свое согласие на обработку моих персональных данных</span>
+            </label>
+            <button class="btn btn-order" disabled="disabled">Отправить</button>
+        </form>
+    </article>
+</div>
+<div class="map"><script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=KxsY8IzttEpRNdKwge52meFvBImuXMrh&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script></div>
+{% endblock %}
