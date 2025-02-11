@@ -244,30 +244,20 @@
         gap: 10px;
 
         li {
-            border-right: 0;
             float: none;
             margin-right: 0;
-            padding-right: 0;
         }
     }
 
     .catalog {
         .box {
-
-            flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 10px;
 
             .item {
                 width: calc(50% - 5px);
-                margin: 0;
-                float: none;
             }
         }
 
-        .box.visible {
-            display: flex;
-        }
     }
 
     .info {
